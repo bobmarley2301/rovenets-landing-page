@@ -18,15 +18,11 @@ const Hero = () => {
       {/* Анімований фон */}
       <AnimatedBackground />
 
-      {/* Фонове зображення з оверлеєм
+      Фонове зображення з оверлеєм
       <div className="absolute inset-0">
-        <img
-          src="/images/hero-bg.jpg"
-          alt="Handmade bags and backpacks"
-          className="w-full h-full object-cover"
-        />
+        
         <div className="absolute inset-0 bg-amber-900/40" />
-      </div> */}
+      </div>
 
       {/* Контент */}
       <div className="container mx-auto px-4 relative z-10">
