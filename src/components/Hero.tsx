@@ -26,12 +26,45 @@ const Hero = () => {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const buttonVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      scale: 1.05,
+      transition: { duration: 0.2 },
+    },
+    tap: {
+      scale: 0.95,
+      transition: { duration: 0.1 },
+    },
   };
 
   const transition = {
@@ -42,7 +75,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden py-20"
     >
       {/* Анімований фон */}
       <AnimatedBackground />
@@ -58,41 +91,40 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          transition={{ duration: isMobile ? 0.5 : 1 }}
-          className="text-center max-w-4xl mx-auto"
+          className="text-center max-w-5xl mx-auto"
         >
           <motion.div
             variants={itemVariants}
-            transition={{ ...transition, delay: isMobile ? 0.1 : 0.2 }}
-            className="space-y-4 sm:space-y-6"
+            className="space-y-6 sm:space-y-8 md:space-y-10"
           >
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-playfair text-white leading-tight tracking-tight">
-              <span className="block mb-2">Унікальні вироби</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-playfair text-white leading-tight tracking-tight">
+              <span className="block mb-3 sm:mb-4">Унікальні вироби</span>
               <span className="block text-amber-100">ручної роботи</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-amber-100/90 max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-amber-100/90 max-w-3xl mx-auto leading-relaxed font-light">
               Сумки та рюкзаки, створені з любов'ю до деталей
             </p>
           </motion.div>
 
           <motion.div
             variants={itemVariants}
-            transition={{ ...transition, delay: isMobile ? 0.3 : 0.6 }}
-            className="mt-8 sm:mt-12 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full sm:w-auto"
+            className="mt-12 sm:mt-16 md:mt-20 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full sm:w-auto"
           >
             <motion.button
-              whileHover={!isMobile ? { scale: 1.05 } : {}}
-              whileTap={!isMobile ? { scale: 0.95 } : {}}
+              variants={buttonVariants}
+              whileHover={!isMobile ? "hover" : undefined}
+              whileTap={!isMobile ? "tap" : undefined}
               onClick={() => scrollToSection("products")}
-              className="w-full sm:w-auto bg-white text-amber-900 px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 rounded-full hover:bg-amber-100 transition-colors text-sm sm:text-base md:text-lg font-medium shadow-lg hover:shadow-xl"
+              className="w-full sm:w-auto bg-white text-amber-900 px-8 sm:px-10 md:px-12 py-3 sm:py-4 md:py-5 rounded-full hover:bg-amber-100 transition-all text-base sm:text-lg md:text-xl font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Переглянути каталог
             </motion.button>
             <motion.button
-              whileHover={!isMobile ? { scale: 1.05 } : {}}
-              whileTap={!isMobile ? { scale: 0.95 } : {}}
+              variants={buttonVariants}
+              whileHover={!isMobile ? "hover" : undefined}
+              whileTap={!isMobile ? "tap" : undefined}
               onClick={() => scrollToSection("contact")}
-              className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 rounded-full hover:bg-white/10 transition-colors text-sm sm:text-base md:text-lg font-medium backdrop-blur-sm"
+              className="w-full sm:w-auto border-2 border-white text-white px-8 sm:px-10 md:px-12 py-3 sm:py-4 md:py-5 rounded-full hover:bg-white/10 transition-all text-base sm:text-lg md:text-xl font-medium backdrop-blur-sm transform hover:-translate-y-1"
             >
               Зв'язатися з нами
             </motion.button>
