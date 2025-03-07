@@ -188,7 +188,7 @@ const Products = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
+              className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/50"
               onClick={() => setSelectedProduct(null)}
             >
               <motion.div
@@ -200,12 +200,13 @@ const Products = () => {
               >
                 <button
                   onClick={() => setSelectedProduct(null)}
-                  className="absolute top-4 right-4 text-amber-900 hover:text-amber-700 z-10"
+                  className="absolute -top-3 -right-3 sm:top-4 sm:right-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20"
+                  aria-label="Закрити"
                 >
-                  <XMarkIcon className="h-6 w-6" />
+                  <XMarkIcon className="h-8 w-8 text-amber-900 hover:text-amber-700 m-2" />
                 </button>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 p-4 sm:p-6">
                   {/* Галерея зображень */}
                   <div className="relative">
                     <Swiper
@@ -214,6 +215,7 @@ const Products = () => {
                       slidesPerView={1}
                       navigation
                       pagination={{ clickable: true }}
+                      className="rounded-lg overflow-hidden"
                     >
                       {selectedProduct.images.map(
                         (image: string, index: number) => (
@@ -223,7 +225,7 @@ const Products = () => {
                               alt={`${selectedProduct.name} - фото ${
                                 index + 1
                               }`}
-                              className="w-full h-[400px] object-cover rounded-lg"
+                              className="w-full h-[300px] sm:h-[400px] object-cover"
                             />
                           </SwiperSlide>
                         )
@@ -232,21 +234,21 @@ const Products = () => {
                   </div>
 
                   {/* Інформація про товар */}
-                  <div className="space-y-4">
-                    <h2 className="text-3xl font-playfair text-amber-900">
+                  <div className="space-y-4 sm:space-y-6">
+                    <h2 className="text-2xl sm:text-3xl font-playfair text-amber-900">
                       {selectedProduct.name}
                     </h2>
-                    <p className="text-2xl font-semibold text-amber-900">
+                    <p className="text-xl sm:text-2xl font-semibold text-amber-900">
                       {selectedProduct.price}
                     </p>
-                    <p className="text-amber-800 text-lg">
+                    <p className="text-base sm:text-lg text-amber-800">
                       {selectedProduct.description}
                     </p>
                     <div className="pt-4">
-                      <h3 className="text-xl font-semibold text-amber-900 mb-2">
+                      <h3 className="text-lg sm:text-xl font-semibold text-amber-900 mb-2">
                         Опис
                       </h3>
-                      <p className="text-amber-800">
+                      <p className="text-base sm:text-lg text-amber-800">
                         {selectedProduct.details}
                       </p>
                     </div>
@@ -257,7 +259,7 @@ const Products = () => {
                           "_blank"
                         );
                       }}
-                      className="w-full bg-amber-900 text-white px-6 py-3 rounded-full hover:bg-amber-800 transition-colors mt-6"
+                      className="w-full bg-amber-900 text-white px-6 py-3 rounded-full hover:bg-amber-800 transition-colors text-base sm:text-lg font-medium shadow-lg hover:shadow-xl mt-6"
                     >
                       Замовити
                     </button>
