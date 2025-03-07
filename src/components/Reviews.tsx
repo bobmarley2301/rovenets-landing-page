@@ -27,7 +27,7 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    <section id="reviews" className="py-20 bg-white">
+    <section id="reviews" className="py-20 bg-amber-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,10 +36,10 @@ const Reviews = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-playfair mb-6">
+          <h2 className="text-3xl md:text-4xl font-playfair mb-6 text-amber-900">
             Відгуки наших клієнтів
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-amber-800 text-lg">
             Що кажуть про нас ті, хто вже придбав наші вироби
           </p>
         </motion.div>
@@ -66,24 +66,26 @@ const Reviews = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 p-6 rounded-lg"
+                className="bg-white p-6 rounded-lg border border-amber-100"
               >
                 <div className="flex items-center mb-4">
                   <img
                     src={review.image}
                     alt={review.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4"
+                    className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-amber-200"
                   />
                   <div>
-                    <h3 className="font-semibold">{review.name}</h3>
-                    <div className="flex text-yellow-400">
+                    <h3 className="font-semibold text-amber-900">
+                      {review.name}
+                    </h3>
+                    <div className="flex text-amber-500">
                       {[...Array(review.rating)].map((_, i) => (
                         <span key={i}>★</span>
                       ))}
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-600">{review.text}</p>
+                <p className="text-amber-800">{review.text}</p>
               </motion.div>
             </SwiperSlide>
           ))}
@@ -100,7 +102,7 @@ const Reviews = () => {
             href="https://www.instagram.com/YOUR_INSTAGRAM"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-gray-900 hover:text-gray-700"
+            className="inline-flex items-center text-amber-900 hover:text-amber-800"
           >
             <span className="mr-2">Більше відгуків на Instagram</span>
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

@@ -61,7 +61,7 @@ const Products = () => {
       : products.filter((product) => product.category === activeCategory);
 
   return (
-    <section id="products" className="py-20 bg-gray-50">
+    <section id="products" className="py-20 bg-amber-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -70,10 +70,10 @@ const Products = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-playfair mb-6">
+          <h2 className="text-3xl md:text-4xl font-playfair mb-6 text-amber-900">
             Наша продукція
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-amber-800 text-lg">
             Відкрийте для себе унікальні вироби ручної роботи
           </p>
         </motion.div>
@@ -86,8 +86,8 @@ const Products = () => {
               onClick={() => setActiveCategory(category.id)}
               className={`px-6 py-2 rounded-full transition-colors ${
                 activeCategory === category.id
-                  ? "bg-gray-900 text-white"
-                  : "bg-white text-gray-900 hover:bg-gray-100"
+                  ? "bg-amber-900 text-white"
+                  : "bg-white text-amber-900 hover:bg-amber-100 border border-amber-200"
               }`}
             >
               {category.name}
@@ -118,7 +118,7 @@ const Products = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-lg overflow-hidden shadow-lg"
+                className="bg-white rounded-lg overflow-hidden shadow-lg border border-amber-100"
               >
                 <div className="relative h-64">
                   <img
@@ -128,17 +128,19 @@ const Products = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                  <p className="text-gray-600 mb-4">{product.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-amber-900">
+                    {product.name}
+                  </h3>
+                  <p className="text-amber-800 mb-4">{product.description}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-xl font-semibold">
+                    <span className="text-xl font-semibold text-amber-900">
                       {product.price}
                     </span>
                     <a
                       href={`https://wa.me/YOUR_PHONE_NUMBER?text=Замовлення: ${product.name}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-gray-900 text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors"
+                      className="bg-amber-900 text-white px-4 py-2 rounded-full hover:bg-amber-800 transition-colors"
                     >
                       Замовити
                     </a>
