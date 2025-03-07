@@ -13,3 +13,12 @@ export interface Product {
   images: string[];
   category: string;
 }
+
+export interface Review {
+  id: number;
+  name: string;
+  rating: number;
+  text: string;
+  images?: string[];
+  imageReviewer: string;
+}

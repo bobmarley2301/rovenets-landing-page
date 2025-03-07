@@ -33145,7 +33145,7 @@ const About = () => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "container mx-auto px-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+    className: "grid grid-cols-1 gap-16 items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
     initial: {
       opacity: 0,
@@ -34216,7 +34216,7 @@ const Products = () => {
     exit: {
       opacity: 0
     },
-    className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50",
+    className: "fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/50",
     onClick: () => setSelectedProduct(null)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_10__.motion.div, {
     initial: {
@@ -34235,11 +34235,12 @@ const Products = () => {
     onClick: e => e.stopPropagation()
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     onClick: () => setSelectedProduct(null),
-    className: "absolute top-4 right-4 text-amber-900 hover:text-amber-700 z-10"
+    className: "absolute -top-3 -right-3 sm:top-4 sm:right-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20",
+    "aria-label": "\u0417\u0430\u043A\u0440\u0438\u0442\u0438"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_12__["default"], {
-    className: "h-6 w-6 m-2"
+    className: "h-8 w-8 text-amber-900 hover:text-amber-700 m-2"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "grid grid-cols-1 md:grid-cols-2 gap-8 p-6"
+    className: "grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 p-4 sm:p-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "relative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_1__.Swiper, {
@@ -34249,32 +34250,33 @@ const Products = () => {
     navigation: true,
     pagination: {
       clickable: true
-    }
+    },
+    className: "rounded-lg overflow-hidden"
   }, selectedProduct.images.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_1__.SwiperSlide, {
     key: index
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: image,
     alt: `${selectedProduct.name} - фото ${index + 1}`,
-    className: "w-full h-[400px] object-cover rounded-lg"
+    className: "w-full h-[300px] sm:h-[400px] object-cover"
   }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "space-y-4"
+    className: "space-y-4 sm:space-y-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-    className: "text-3xl font-playfair text-amber-900"
+    className: "text-2xl sm:text-3xl font-playfair text-amber-900"
   }, selectedProduct.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "text-2xl font-semibold text-amber-900"
+    className: "text-xl sm:text-2xl font-semibold text-amber-900"
   }, selectedProduct.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "text-amber-800 text-lg"
+    className: "text-base sm:text-lg text-amber-800"
   }, selectedProduct.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pt-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
-    className: "text-xl font-semibold text-amber-900 mb-2"
+    className: "text-lg sm:text-xl font-semibold text-amber-900 mb-2"
   }, "\u041E\u043F\u0438\u0441"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "text-amber-800"
+    className: "text-base sm:text-lg text-amber-800"
   }, selectedProduct.details)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     onClick: () => {
       window.open(`https://wa.me/YOUR_PHONE_NUMBER?text=Замовлення: ${selectedProduct.name}`, "_blank");
     },
-    className: "w-full bg-amber-900 text-white px-6 py-3 rounded-full hover:bg-amber-800 transition-colors mt-6"
+    className: "w-full bg-amber-900 text-white px-6 py-3 rounded-full hover:bg-amber-800 transition-colors text-base sm:text-lg font-medium shadow-lg hover:shadow-xl mt-6"
   }, "\u0417\u0430\u043C\u043E\u0432\u0438\u0442\u0438"))))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Products);
@@ -34294,16 +34296,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs");
 /* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/react */ "./node_modules/swiper/swiper-react.mjs");
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/XMarkIcon.js");
 /* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
 /* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(swiper_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
 /* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(swiper_css_navigation__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
 /* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(swiper_css_pagination__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _images_User_Profile_Icon_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/User Profile Icon.png */ "./src/images/User Profile Icon.png");
 
 
 
@@ -34315,25 +34318,43 @@ __webpack_require__.r(__webpack_exports__);
 const reviews = [{
   id: 1,
   name: "Анна Петренко",
-  image: _images_User_Profile_Icon_png__WEBPACK_IMPORTED_MODULE_6__["default"],
+  imageReviewer: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
   text: "Чудова якість та увага до деталей! Мій рюкзак виглядає просто чарівно і дуже зручний у використанні.",
-  rating: 5
+  rating: 5,
+  imageReview: "https://placehold.co/500x400"
 }, {
   id: 2,
   name: "Максим Коваленко",
-  image: _images_User_Profile_Icon_png__WEBPACK_IMPORTED_MODULE_6__["default"],
+  imageReviewer: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
   text: "Замовляв індивідуальну сумку. Результат перевершив всі мої очікування. Рекомендую!",
-  rating: 5
-}
-// Додайте більше відгуків тут
-];
+  rating: 5,
+  imageReview: "https://placehold.co/500x400"
+}, {
+  id: 3,
+  name: "Олена Сидоренко",
+  imageReviewer: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop",
+  text: "Дуже задоволена якістю та швидкістю виготовлення. Сумка вийшла просто чудова!",
+  rating: 5,
+  imageReview: "https://placehold.co/500x400"
+}, {
+  id: 4,
+  name: "Іван Мельник",
+  imageReviewer: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
+  text: "Відмінна робота! Рюкзак виготовлений з дотриманням всіх моїх побажань. Дякую!",
+  rating: 5,
+  imageReview: "https://placehold.co/500x400"
+}];
 const Reviews = () => {
+  const {
+    0: selectedImage,
+    1: setSelectedImage
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     id: "reviews",
     className: "py-20 bg-amber-50"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "container mx-auto px-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_6__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -34368,10 +34389,11 @@ const Reviews = () => {
       1024: {
         slidesPerView: 3
       }
-    }
+    },
+    className: "px-8 sm:px-12 md:px-16"
   }, reviews.map(review => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_1__.SwiperSlide, {
     key: review.id
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_6__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -34389,19 +34411,63 @@ const Reviews = () => {
     className: "bg-white p-6 rounded-lg border border-amber-100"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex items-center mb-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "relative cursor-pointer group",
+    onClick: () => setSelectedImage(review.imageReview)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    src: review.image,
+    src: review.imageReview,
     alt: review.name,
-    className: "w-12 h-12 rounded-full object-cover mr-4 border-2 border-amber-200"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    className: "w-12 h-12 rounded-full object-cover mr-4 border-2 border-amber-200 transition-transform duration-200 group-hover:scale-110"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "absolute inset-0 bg-black/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "text-white text-xs"
+  }, "\u041D\u0430\u0442\u0438\u0441\u043D\u0456\u0442\u044C \u0434\u043B\u044F \u043F\u0435\u0440\u0435\u0433\u043B\u044F\u0434\u0443"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
     className: "font-semibold text-amber-900"
   }, review.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex text-amber-500"
   }, [...Array(review.rating)].map((_, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     key: i
   }, "\u2605"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "text-amber-800"
-  }, review.text))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.motion.div, {
+    className: "text-amber-800 pr-2"
+  }, review.text))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.AnimatePresence, null, selectedImage && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_6__.motion.div, {
+    initial: {
+      opacity: 0
+    },
+    animate: {
+      opacity: 1
+    },
+    exit: {
+      opacity: 0
+    },
+    className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90",
+    onClick: () => setSelectedImage(null)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_6__.motion.div, {
+    initial: {
+      scale: 0.9,
+      opacity: 0
+    },
+    animate: {
+      scale: 1,
+      opacity: 1
+    },
+    exit: {
+      scale: 0.9,
+      opacity: 0
+    },
+    className: "relative max-w-4xl w-full",
+    onClick: e => e.stopPropagation()
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    onClick: () => setSelectedImage(null),
+    className: "absolute -top-12 right-0 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20",
+    "aria-label": "\u0417\u0430\u043A\u0440\u0438\u0442\u0438"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    className: "h-6 w-6 text-amber-900 hover:text-amber-700"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: selectedImage,
+    alt: "\u0424\u043E\u0442\u043E \u043A\u043B\u0456\u0454\u043D\u0442\u0430",
+    className: "w-full h-auto rounded-lg shadow-2xl"
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_6__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -34423,9 +34489,25 @@ const Reviews = () => {
     target: "_blank",
     rel: "noopener noreferrer",
     className: "inline-flex items-center text-amber-900 hover:text-amber-800"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-    className: "mr-2"
-  }, "\u0411\u0456\u043B\u044C\u0448\u0435 \u0432\u0456\u0434\u0433\u0443\u043A\u0456\u0432 \u043D\u0430 Instagram"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_6__.motion.span, {
+    animate: {
+      y: [0, -10, 0]
+    },
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+      repeat: Infinity
+    },
+    className: "mr-2 underline"
+  }, "\u0411\u0456\u043B\u044C\u0448\u0435 \u0432\u0456\u0434\u0433\u0443\u043A\u0456\u0432 \u043D\u0430 Instagram"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_6__.motion.svg, {
+    animate: {
+      y: [0, -10, 0]
+    },
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+      repeat: Infinity
+    },
     className: "w-5 h-5",
     fill: "currentColor",
     viewBox: "0 0 24 24"
@@ -34589,21 +34671,6 @@ const NAV_ITEMS = [{
   id: SECTIONS.CONTACTS
 }];
 const SCROLL_OFFSET = 80; // Висота навбару
-
-/***/ }),
-
-/***/ "./src/images/User Profile Icon.png":
-/*!******************************************!*\
-  !*** ./src/images/User Profile Icon.png ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/static/User Profile Icon-56f71000791aaaf722a0d825277fdcb1.png");
 
 /***/ }),
 
