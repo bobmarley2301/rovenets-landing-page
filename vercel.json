@@ -1,0 +1,11 @@
+{
+  "buildCommand": "gatsby build",
+  "outputDirectory": "public",
+  "framework": "gatsby",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

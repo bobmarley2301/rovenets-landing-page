@@ -1,26 +1,22 @@
-# Handmade Bags & Backpacks
+# Rovenets Landing Page
 
-Односторінковий сайт для бренду handmade-сумок і рюкзаків, створений з використанням Next.js, TypeScript та Tailwind CSS.
+Лендінг для handmade сумок та рюкзаків, створений з використанням Gatsby, React та Tailwind CSS.
 
 ## Технології
 
--   Next.js 13
--   TypeScript
--   Tailwind CSS
--   Framer Motion
--   Swiper.js
-
-## Вимоги
-
--   Node.js 16.x або вище
--   npm 7.x або вище
+- Gatsby
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Headless UI
 
 ## Встановлення
 
 1. Клонуйте репозиторій:
 
 ```bash
-git clone https://github.com/your-username/handmade-bags.git
+git clone https://github.com/yourusername/rovenets-landing-page.git
 cd handmade-bags
 ```
 
@@ -30,51 +26,23 @@ cd handmade-bags
 npm install
 ```
 
-3. Створіть файл `.env.local` в корені проекту та додайте необхідні змінні середовища:
-
-```env
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-```
-
-4. Запустіть проект в режимі розробки:
+3. Запустіть проект локально:
 
 ```bash
-npm run dev
+npm run develop
 ```
 
-5. Відкрийте [http://localhost:3000](http://localhost:3000) у вашому браузері.
+## Розробка
 
-## Збірка для продакшену
+- `npm run develop` - запуск проекту в режимі розробки
+- `npm run build` - збірка проекту
+- `npm run serve` - запуск зібраного проекту
+- `npm run clean` - очищення кешу Gatsby
+- `npm run typecheck` - перевірка типів TypeScript
 
-Для створення продакшен-збірки виконайте:
+## Деплой
 
-```bash
-npm run build
-```
-
-Для запуску продакшен-версії:
-
-```bash
-npm start
-```
-
-## Структура проекту
-
-```
-handmade-bags/
-├── public/
-│   └── images/          # Зображення
-├── src/
-│   ├── components/      # React компоненти
-│   ├── pages/          # Сторінки Next.js
-│   └── styles/         # Глобальні стилі
-├── .env.local          # Змінні середовища
-├── next.config.js      # Конфігурація Next.js
-├── package.json        # Залежності та скрипти
-├── postcss.config.js   # Конфігурація PostCSS
-├── tailwind.config.js  # Конфігурація Tailwind CSS
-└── tsconfig.json       # Конфігурація TypeScript
-```
+Проект налаштований для автоматичного деплою на Vercel. Просто підключіть репозиторій до Vercel, і він автоматично збере та розгорне ваш сайт.
 
 ## Ліцензія
 
