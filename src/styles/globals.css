@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply font-montserrat text-gray-900;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-playfair;
+	}
+}
+
+@layer components {
+	.container {
+		@apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+	}
+}
+
+/* Стилі для Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+	@apply text-gray-900;
+}
+
+.swiper-pagination-bullet-active {
+	@apply bg-gray-900;
+}
+
+/* Анімації */
+.fade-in {
+	@apply opacity-0 transition-opacity duration-500;
+}
+
+.fade-in.visible {
+	@apply opacity-100;
+}
+
+/* Медіа-запити */
+@media (max-width: 640px) {
+	html {
+		font-size: 14px;
+	}
+}
