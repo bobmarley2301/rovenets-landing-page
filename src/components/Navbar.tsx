@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import { NAV_ITEMS, SCROLL_OFFSET } from "../constants/routes";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { SectionId } from "../types";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,22 +34,17 @@ const Navbar = () => {
       const sections = NAV_ITEMS.map((item) => item.id);
       const currentScrollY = window.scrollY;
 
-      // Логіка для приховування/показу навбара
       if (currentScrollY > 100) {
         if (currentScrollY > lastScrollY) {
-          // Скрол вниз
           setIsVisible(false);
         } else {
-          // Скрол вгору
           setIsVisible(true);
         }
       } else {
-        // Якщо ми вище 100px, навбар завжди прихований
         setIsVisible(false);
       }
       setLastScrollY(currentScrollY);
 
-      // Логіка для активного розділу
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -79,7 +75,6 @@ const Navbar = () => {
             Rovenets
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {NAV_ITEMS.map((item) => (
               <button
@@ -94,18 +89,21 @@ const Navbar = () => {
                 {item.name}
               </button>
             ))}
+            <LanguageSwitcher />
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={toggleMenu}
             className="md:hidden text-amber-900"
           >
-            <Bars3Icon className="h-6 w-6" />
+            {isOpen ? (
+              <XMarkIcon className="h-6 w-6" />
+            ) : (
+              <Bars3Icon className="h-6 w-6" />
+            )}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -131,6 +129,7 @@ const Navbar = () => {
                     {item.name}
                   </button>
                 ))}
+                <LanguageSwitcher />
               </div>
             </motion.div>
           )}

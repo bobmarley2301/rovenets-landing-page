@@ -6,10 +6,12 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import card1 from "../images/card1.webp";
 import card2 from "../images/card2.webp";
 import card3 from "../images/card3.webp";
 import card4 from "../images/card4.webp";
+import { t } from "i18next";
 
 interface Product {
   id: number;
@@ -53,12 +55,12 @@ const products: Product[] = [
     image: card3,
     description: "Просторний рюкзак для подорожей та походів",
     details:
-      "Рюкзак у формі лілії з міцних матеріалів. Має водонепроникне покриття та зручні відділення. Ідеально підходить для подорожей та активного відпочинку.",
+      t("products.lily_shaped_bag.details"),
     images: [card3, card1, card2, card4],
   },
   {
     id: 4,
-    name: "koala children's backpack",
+    name: "Koala children's backpack",
     category: "children",
     price: "1500 грн",
     image: card4,
@@ -67,7 +69,6 @@ const products: Product[] = [
       "Рюкзак з принтом коали. Легкий та зручний, має регульовані ремені та відділення для організації речей. Ідеальний для дітей дошкільного та молодшого шкільного віку.",
     images: [card4, card1, card2, card3],
   },
-  // Додайте більше товарів тут
 ];
 
 const categories = [
@@ -77,6 +78,7 @@ const categories = [
 ];
 
 const Products = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState("all");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
@@ -96,11 +98,9 @@ const Products = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-playfair mb-6 text-amber-900">
-            Наша продукція
+            {t("products.title")}
           </h2>
-          <p className="text-amber-800 text-lg">
-            Відкрийте для себе унікальні вироби ручної роботи
-          </p>
+          <p className="text-amber-800 text-lg">{t("products.subtitle")}</p>
         </motion.div>
 
         {/* Фільтри */}
@@ -115,7 +115,7 @@ const Products = () => {
                   : "bg-white text-amber-900 hover:bg-amber-100 border border-amber-200"
               }`}
             >
-              {category.name}
+              {t(`categories.${category.id}`)}
             </button>
           ))}
         </div>
@@ -166,13 +166,15 @@ const Products = () => {
                       onClick={(e) => {
                         e.stopPropagation();
                         window.open(
-                          `https://wa.me/YOUR_PHONE_NUMBER?text=Замовлення: ${product.name}`,
+                          `https://wa.me/YOUR_PHONE_NUMBER?text=${t("order")} ${
+                            product.name
+                          }`,
                           "_blank"
                         );
                       }}
                       className="bg-amber-900 text-white px-4 py-2 rounded-full hover:bg-amber-800 transition-colors"
                     >
-                      Замовити
+                      {t("order")}
                     </button>
                   </div>
                 </div>
@@ -234,34 +236,28 @@ const Products = () => {
                   </div>
 
                   {/* Інформація про товар */}
-                  <div className="space-y-4 sm:space-y-6">
-                    <h2 className="text-2xl sm:text-3xl font-playfair text-amber-900">
+                  <div className="space-y-6">
+                    <h2 className="text-3xl font-semibold text-amber-900">
                       {selectedProduct.name}
                     </h2>
-                    <p className="text-xl sm:text-2xl font-semibold text-amber-900">
+                    <p className="text-lg text-amber-800">
+                      {selectedProduct.details}
+                    </p>
+                    <p className="text-xl font-semibold text-amber-900">
                       {selectedProduct.price}
                     </p>
-                    <p className="text-base sm:text-lg text-amber-800">
-                      {selectedProduct.description}
-                    </p>
-                    <div className="pt-4">
-                      <h3 className="text-lg sm:text-xl font-semibold text-amber-900 mb-2">
-                        Опис
-                      </h3>
-                      <p className="text-base sm:text-lg text-amber-800">
-                        {selectedProduct.details}
-                      </p>
-                    </div>
                     <button
-                      onClick={() => {
+                      onClick={() =>
                         window.open(
-                          `https://wa.me/YOUR_PHONE_NUMBER?text=Замовлення: ${selectedProduct.name}`,
+                          `https://wa.me/YOUR_PHONE_NUMBER?text=${t("order")} ${
+                            selectedProduct.name
+                          }`,
                           "_blank"
-                        );
-                      }}
-                      className="w-full bg-amber-900 text-white px-6 py-3 rounded-full hover:bg-amber-800 transition-colors text-base sm:text-lg font-medium shadow-lg hover:shadow-xl mt-6"
+                        )
+                      }
+                      className="bg-amber-900 text-white px-6 py-2 rounded-full hover:bg-amber-800 transition-colors"
                     >
-                      Замовити
+                      {t("order")}
                     </button>
                   </div>
                 </div>

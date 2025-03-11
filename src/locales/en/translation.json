@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "title": "Rovenets - unique handmade products",
+    "subtitle": "Handmade bags and backpacks from natural materials",
+    "description": "We create unique products from natural materials, designed with care and passion. Each item is handcrafted to ensure quality and style.",
+    "catalogButton": "Browse our catalog",
+    "contactButton": "Contact us"
+  },
+  "about": {
+    "title": "About Us",
+    "description_1": "We create unique handmade products with love and attention to detail, ensuring top-quality materials are carefully chosen for each bag and backpack.",
+    "description_2": "Our mission is to create not just accessories, but unique pieces that become part of your story and an expression of your individuality.",
+    "experience": "5+ Years of Experience",
+    "clients": "100+ Satisfied Clients",
+    "values": {
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "Eco-friendly materials and responsible production"
+      },
+      "handmade": {
+        "title": "Handmade",
+        "description": "Each product is made by hand with love"
+      },
+      "custom_orders": {
+        "title": "Custom Orders",
+        "description": "Custom orders for your unique needs"
+      }
+    }
+  }
+,
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Discover unique handmade items",
+    "all": "All",
+    "women": "Women's",
+    "children": "Children's",
+    "order": "Order",
+    "modal": {
+      "close": "Close",
+      "description": "Description"
+    }
+  },
+  "product": {
+    "name": "Name",
+    "price": "Price",
+    "description": "Description",
+    "details": "Details",
+    "sunflower_bag": {
+      "name": "Sunflower Bag",
+      "category": "Women",
+      "price": "2500 UAH",
+      "description": "A versatile leather backpack",
+      "details": "The backpack is made of high-quality genuine leather. It has adjustable straps and internal compartments for organizing your things. Perfect for daily walks and travel."
+    },
+    "romantic_dog_bag": {
+      "name": "Romantic Dog Bag",
+      "category": "Children",
+      "price": "1800 UAH",
+      "description": "An elegant bag for everyday walks",
+      "details": "A bag with a cute dog print. Made of durable materials, it has a comfortable handle and an adjustable strap. Ideal for walks and shopping."
+    },
+    "lily_shaped_bag": {
+      "name": "Lily-shaped Bag",
+      "category": "Women",
+      "price": "2800 UAH",
+      "description": "A spacious backpack for travel and hiking",
+      "details": "A lily-shaped backpack made of durable materials. It has a waterproof coating and comfortable compartments. Perfect for traveling and active recreation."
+    },
+    "koala_children_backpack": {
+      "name": "Koala Children's Backpack",
+      "category": "Children",
+      "price": "1500 UAH",
+      "description": "A compact bag for small items",
+      "details": "A backpack with a koala print. Lightweight and comfortable, it has adjustable straps and compartments for organizing your things. Ideal for preschool and early school-age children."
+    }
+  }
+}
