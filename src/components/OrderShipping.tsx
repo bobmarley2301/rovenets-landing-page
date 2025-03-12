@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
-const steps = [
+// Запасні дані, які будуть використовуватися при відсутності перекладів
+const fallbackSteps = [
   {
     number: "01",
     title: "Оберіть модель",
@@ -20,7 +22,56 @@ const steps = [
   },
 ];
 
+const fallbackShippingItems = [
+  "Доставка по всій Україні - 2-3 дні",
+  "Міжнародна доставка - 5-10 днів",
+  "Відстеження замовлення",
+  "Безпечна упаковка",
+];
+
+const fallbackProductionItems = [
+  "Виготовлення виробу - 3-5 робочих днів",
+  "Відправка замовлення - протягом 1-2 днів",
+  "Можливість термінового виконання",
+  "Регулярні оновлення статусу замовлення",
+];
+
 const OrderShipping = () => {
+  const { t } = useTranslation();
+
+  // Отримуємо переклади кроків з JSON-файлу з перевіркою
+  const steps =
+    (t("orderShipping.steps", { returnObjects: true }) as Array<{
+      number: string;
+      title: string;
+      description: string;
+    }>) || fallbackSteps;
+
+  // Отримуємо переклади для доставки з перевіркою
+  const shippingItems =
+    (t("orderShipping.shipping.items", {
+      returnObjects: true,
+    }) as string[]) || fallbackShippingItems;
+
+  // Отримуємо переклади для періоду виготовлення з перевіркою
+  const productionItems =
+    (t("orderShipping.production.items", {
+      returnObjects: true,
+    }) as string[]) || fallbackProductionItems;
+
+  // Перевірка, чи є отримані дані масивами
+  const validSteps = Array.isArray(steps) ? steps : fallbackSteps;
+  const validShippingItems = Array.isArray(shippingItems)
+    ? shippingItems
+    : fallbackShippingItems;
+  const validProductionItems = Array.isArray(productionItems)
+    ? productionItems
+    : fallbackProductionItems;
+
+  console.log("Steps:", steps); // Додаємо логування для діагностики
+  console.log("Shipping items:", shippingItems);
+  console.log("Production items:", productionItems);
+
   return (
     <section id="order-shipping" className="py-24 bg-amber-50">
       <div className="container mx-auto px-6">
@@ -32,18 +83,21 @@ const OrderShipping = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-playfair mb-6 text-amber-900">
-            Замовлення та доставка
+            {t("orderShipping.title", "Замовлення та доставка")}
           </h2>
           <p className="text-amber-800 text-lg">
-            Простий процес замовлення та швидка доставка
+            {t(
+              "orderShipping.subtitle",
+              "Простий процес замовлення та швидка доставка"
+            )}
           </p>
         </motion.div>
 
         {/* Кроки замовлення */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {steps.map((step, index) => (
+          {validSteps.map((step, index) => (
             <motion.div
-              key={step.number}
+              key={step.number || index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -73,13 +127,12 @@ const OrderShipping = () => {
             className="bg-amber-100/50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
           >
             <h3 className="text-2xl font-semibold mb-6 text-amber-900">
-              Доставка
+              {t("orderShipping.shipping.title", "Доставка")}
             </h3>
             <ul className="space-y-3 text-amber-800 text-lg">
-              <li>• Доставка по всій Україні - 2-3 дні</li>
-              <li>• Міжнародна доставка - 5-10 днів</li>
-              <li>• Відстеження замовлення</li>
-              <li>• Безпечна упаковка</li>
+              {validShippingItems.map((item, index) => (
+                <li key={index}>• {item}</li>
+              ))}
             </ul>
           </motion.div>
 
@@ -91,13 +144,15 @@ const OrderShipping = () => {
             className="bg-amber-100/50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
           >
             <h3 className="text-2xl font-semibold mb-6 text-amber-900">
-              Політика повернення
+              {t(
+                "orderShipping.production.title",
+                "Період виготовлення та відправки"
+              )}
             </h3>
             <ul className="space-y-3 text-amber-800 text-lg">
-              <li>• Повернення протягом 14 днів</li>
-              <li>• Безкоштовна доставка при поверненні</li>
-              <li>• Повний поворот коштів</li>
-              <li>• Збереження оригінальної упаковки</li>
+              {validProductionItems.map((item, index) => (
+                <li key={index}>• {item}</li>
+              ))}
             </ul>
           </motion.div>
         </div>
@@ -115,7 +170,7 @@ const OrderShipping = () => {
             rel="noopener noreferrer"
             className="inline-block bg-amber-900 text-white px-8 py-3 rounded-full hover:bg-amber-800 transition-colors"
           >
-            Замовити зараз
+            {t("orderShipping.orderNow", "Замовити зараз")}
           </a>
         </motion.div>
       </div>

@@ -26,8 +26,7 @@
         "description": "Custom orders for your unique needs"
       }
     }
-  }
-,
+  },
   "products": {
     "title": "Our Products",
     "subtitle": "Discover unique handmade items",
@@ -40,6 +39,12 @@
       "description": "Description"
     }
   },
+  "categories": {
+    "children": "Children",
+    "women": "Women's",
+    "all": "All",
+    "mom&child": "Mom & Child"
+  },
   "product": {
     "name": "Name",
     "price": "Price",
@@ -51,6 +56,13 @@
       "price": "2500 UAH",
       "description": "A versatile leather backpack",
       "details": "The backpack is made of high-quality genuine leather. It has adjustable straps and internal compartments for organizing your things. Perfect for daily walks and travel."
+    },
+    "mom_child_bear_set": {
+      "name": "Mom and Child Bear Bag Set",
+      "price": "1200 UAH",
+      "category": "mom&child",
+      "description": "A stylish and convenient bag set for moms and kids, decorated with a cute bear.",
+      "details": "The set includes two bags: a large one for the mom and a small one for the child. Made of high-quality materials, featuring comfortable straps and multiple compartments."
     },
     "romantic_dog_bag": {
       "name": "Romantic Dog Bag",
@@ -72,6 +84,137 @@
       "price": "1500 UAH",
       "description": "A compact bag for small items",
       "details": "A backpack with a koala print. Lightweight and comfortable, it has adjustable straps and compartments for organizing your things. Ideal for preschool and early school-age children."
+    }
+  },
+  "reviews": {
+    "title": "Customer Reviews",
+    "subtitle": "See what our customers are saying about us",
+    "close": "Close",
+    "photo": "Customer photo",
+    "more_on_instagram": "More reviews on Instagram",
+    "0": {
+      "id": 1,
+      "name1": "Anna Petrenko",
+      "text1": "Excellent quality and attention to detail! My backpack looks simply charming and is very convenient to use."
+    },
+    "1": {
+      "id": 2,
+      "name2": "Maksym Kovalenko",
+      "text2": "Ordered a custom bag. The result exceeded all my expectations. Highly recommend!"
+    },
+    "2": {
+      "id": 3,
+      "name3": "Olena Sydorenko",
+      "text3": "Very satisfied with the quality and production speed. The bag turned out just wonderful!"
+    },
+    "3": {
+      "id": 4,
+      "name4": "Ivan Melnyk",
+      "text4": "Great job! The backpack was made according to all my wishes. Thank you!"
+    }
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us?",
+    "subtitle": "Our advantages that make us unique",
+    "contactButton": "Contact Us",
+    "advantages": [
+      {
+        "icon": "🌿",
+        "title": "Eco-friendly Materials",
+        "description": "We use only high-quality, environmentally friendly materials for our products"
+      },
+      {
+        "icon": "✋",
+        "title": "100% Handmade",
+        "description": "Each product is handcrafted with special attention to detail"
+      },
+      {
+        "icon": "🛫",
+        "title": "Worldwide Delivery",
+        "description": "Fast and reliable delivery to any point in the world"
+      },
+      {
+        "icon": "🎁",
+        "title": "Custom Orders",
+        "description": "We create unique products according to your wishes"
+      }
+    ]
+  },
+  "orderShipping": {
+    "title": "Order and Shipping",
+    "subtitle": "Simple ordering process and fast delivery",
+    "orderNow": "Order Now",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Choose a Model",
+        "description": "Browse our catalog and select a model you like"
+      },
+      {
+        "number": "02",
+        "title": "Contact Us",
+        "description": "Get in touch with us via WhatsApp or contact form"
+      },
+      {
+        "number": "03",
+        "title": "Receive Your Order",
+        "description": "We will deliver your order to any location worldwide"
+      }
+    ],
+    "shipping": {
+      "title": "Shipping",
+      "items": [
+        "Delivery across Ukraine - 2-3 days",
+        "International shipping - 5-10 days",
+        "Order tracking",
+        "Secure packaging"
+      ]
+    },
+    "production": {
+      "title": "Production and Dispatch Period",
+      "items": [
+        "Product manufacturing - 3-5 working days",
+        "Order dispatch - within 1-2 days",
+        "Express order fulfillment available",
+        "Regular order status updates"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have questions? We're always in touch",
+    "info": {
+      "title": "Contact Information",
+      "phone": {
+        "label": "Phone",
+        "value": "+380991234567",
+        "display": "+38 (099) 123-45-67"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@rovenets.com",
+        "display": "info@rovenets.com"
+      },
+      "address": {
+        "label": "Address",
+        "value": "Kyiv, 1 Prykladna St."
+      }
+    },
+    "form": {
+      "title": "Write to Us",
+      "name": {
+        "label": "Your Name",
+        "placeholder": "Enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Enter your message"
+      },
+      "submit": "Send"
     }
   }
 }

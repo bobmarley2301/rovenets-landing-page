@@ -37815,22 +37815,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby-plugin-react-i18next */ "./node_modules/gatsby-plugin-react-i18next/index.js");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 const About = () => {
+  const {
+    t
+  } = (0,gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__.useTranslation)();
   const values = [{
     icon: "🌿",
-    title: "Sustainability",
-    description: "Екологічні матеріали та відповідальне виробництво"
+    titleKey: "about.values.sustainability.title",
+    descriptionKey: "about.values.sustainability.description"
   }, {
     icon: "✋",
-    title: "Handmade",
-    description: "Кожен виріб зроблений вручну з любов'ю"
+    titleKey: "about.values.handmade.title",
+    descriptionKey: "about.values.handmade.description"
   }, {
     icon: "🎁",
-    title: "Custom Orders",
-    description: "Індивідуальні замовлення для ваших унікальних потреб"
+    titleKey: "about.values.custom_orders.title",
+    descriptionKey: "about.values.custom_orders.description"
   }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     id: "about",
@@ -37839,7 +37845,7 @@ const About = () => {
     className: "container mx-auto px-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "grid grid-cols-1 gap-16 items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
     initial: {
       opacity: 0,
       x: 20
@@ -37857,11 +37863,11 @@ const About = () => {
     className: "space-y-8"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "text-4xl md:text-5xl font-playfair mb-8 text-amber-900"
-  }, "\u041F\u0440\u043E \u043D\u0430\u0441"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, t("about.title")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-amber-800 text-lg leading-relaxed"
-  }, "\u041C\u0438 \u0441\u0442\u0432\u043E\u0440\u044E\u0454\u043C\u043E \u0443\u043D\u0456\u043A\u0430\u043B\u044C\u043D\u0456 \u0432\u0438\u0440\u043E\u0431\u0438 \u0440\u0443\u0447\u043D\u043E\u0457 \u0440\u043E\u0431\u043E\u0442\u0438 \u0437 \u043B\u044E\u0431\u043E\u0432'\u044E \u0434\u043E \u0434\u0435\u0442\u0430\u043B\u0435\u0439 \u0442\u0430 \u0443\u0432\u0430\u0433\u043E\u044E \u0434\u043E \u044F\u043A\u043E\u0441\u0442\u0456. \u041A\u043E\u0436\u043D\u0430 \u0441\u0443\u043C\u043A\u0430 \u0442\u0430 \u0440\u044E\u043A\u0437\u0430\u043A - \u0446\u0435 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442 \u0442\u0432\u043E\u0440\u0447\u043E\u0433\u043E \u043F\u0456\u0434\u0445\u043E\u0434\u0443 \u0442\u0430 \u0440\u0435\u0442\u0435\u043B\u044C\u043D\u043E\u0433\u043E \u043F\u0456\u0434\u0431\u043E\u0440\u0443 \u043C\u0430\u0442\u0435\u0440\u0456\u0430\u043B\u0456\u0432."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, t("about.description_1")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-amber-800 text-lg leading-relaxed"
-  }, "\u041D\u0430\u0448\u0430 \u043C\u0456\u0441\u0456\u044F - \u0441\u0442\u0432\u043E\u0440\u044E\u0432\u0430\u0442\u0438 \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u043E \u0430\u043A\u0441\u0435\u0441\u0443\u0430\u0440\u0438, \u0430 \u0443\u043D\u0456\u043A\u0430\u043B\u044C\u043D\u0456 \u0432\u0438\u0440\u043E\u0431\u0438, \u044F\u043A\u0456 \u0441\u0442\u0430\u043D\u0443\u0442\u044C \u0447\u0430\u0441\u0442\u0438\u043D\u043E\u044E \u0432\u0430\u0448\u043E\u0457 \u0456\u0441\u0442\u043E\u0440\u0456\u0457 \u0442\u0430 \u0432\u0438\u0440\u0430\u0437\u043E\u043C \u0432\u0430\u0448\u043E\u0457 \u0456\u043D\u0434\u0438\u0432\u0456\u0434\u0443\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u0456."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("about.description_2")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "grid grid-cols-2 gap-8 pt-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "text-center p-6 bg-amber-100/50 rounded-xl"
@@ -37869,16 +37875,16 @@ const About = () => {
     className: "text-4xl font-bold text-amber-900 mb-3"
   }, "5+"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "text-amber-800 font-medium"
-  }, "\u0420\u043E\u043A\u0456\u0432 \u0434\u043E\u0441\u0432\u0456\u0434\u0443")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("about.experience"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "text-center p-6 bg-amber-100/50 rounded-xl"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "text-4xl font-bold text-amber-900 mb-3"
   }, "100+"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "text-amber-800 font-medium"
-  }, "\u0417\u0430\u0434\u043E\u0432\u043E\u043B\u0435\u043D\u0438\u0445 \u043A\u043B\u0456\u0454\u043D\u0442\u0456\u0432"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("about.clients")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "grid grid-cols-1 md:grid-cols-3 gap-8 mt-20"
-  }, values.map((value, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
-    key: value.title,
+  }, values.map((value, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
+    key: value.titleKey,
     initial: {
       opacity: 0,
       y: 20
@@ -37899,9 +37905,9 @@ const About = () => {
     className: "text-5xl mb-6"
   }, value.icon), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
     className: "text-2xl font-semibold mb-4 text-amber-900"
-  }, value.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, t(value.titleKey)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-amber-800 text-lg"
-  }, value.description))))));
+  }, t(value.descriptionKey)))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
 
@@ -38280,11 +38286,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion.mjs");
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
 /* harmony import */ var _AnimatedBackground__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AnimatedBackground */ "./src/components/AnimatedBackground.tsx");
-/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-plugin-react-i18next */ "./node_modules/gatsby-plugin-react-i18next/index.js");
-/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _heroLanguageSwitcher__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./heroLanguageSwitcher */ "./src/components/heroLanguageSwitcher.tsx");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gatsby-plugin-react-i18next */ "./node_modules/gatsby-plugin-react-i18next/index.js");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -38295,10 +38303,10 @@ const Hero = () => {
     0: isMobile,
     1: setIsMobile
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const prefersReducedMotion = (0,framer_motion__WEBPACK_IMPORTED_MODULE_3__.useReducedMotion)();
+  const prefersReducedMotion = (0,framer_motion__WEBPACK_IMPORTED_MODULE_4__.useReducedMotion)();
   const {
     t
-  } = (0,gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_2__.useTranslation)();
+  } = (0,gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_3__.useTranslation)();
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -38369,19 +38377,28 @@ const Hero = () => {
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     id: "home",
-    className: "relative min-h-[100dvh] flex items-center justify-center overflow-hidden py-20"
+    className: "relative min-h-screen flex items-center justify-center overflow-hidden py-20"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_AnimatedBackground__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "absolute inset-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "absolute inset-0 bg-amber-900/40"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "container mx-auto px-4 relative z-10"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.div, {
+    className: "container mx-auto px-4 relative z-10 flex flex-col items-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_5__.motion.div, {
+    initial: "hidden",
+    animate: "visible",
+    variants: containerVariants,
+    transition: {
+      delay: 0.5,
+      duration: 1.5,
+      ease: "easeInOut"
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroLanguageSwitcher__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_5__.motion.div, {
     initial: "hidden",
     animate: "visible",
     variants: containerVariants,
     className: "text-center max-w-5xl mx-auto"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_5__.motion.div, {
     variants: itemVariants,
     className: "space-y-6 sm:space-y-8 md:space-y-10"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
@@ -38392,16 +38409,16 @@ const Hero = () => {
     className: "block text-amber-100"
   }, t("hero.subtitle"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-xl sm:text-2xl md:text-3xl lg:text-4xl text-amber-100/90 max-w-3xl mx-auto leading-relaxed font-light"
-  }, t("hero.description"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.div, {
+  }, t("hero.description"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_5__.motion.div, {
     variants: itemVariants,
     className: "mt-12 sm:mt-16 md:mt-20 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full sm:w-auto"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.button, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_5__.motion.button, {
     variants: buttonVariants,
     whileHover: !isMobile ? "hover" : undefined,
     whileTap: !isMobile ? "tap" : undefined,
     onClick: () => scrollToSection("products"),
     className: "w-full sm:w-auto bg-white text-amber-900 px-8 sm:px-10 md:px-12 py-3 sm:py-4 md:py-5 rounded-full hover:bg-amber-100 transition-all text-base sm:text-lg md:text-xl font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-  }, t("hero.catalogButton")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.button, {
+  }, t("hero.catalogButton")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_5__.motion.button, {
     variants: buttonVariants,
     whileHover: !isMobile ? "hover" : undefined,
     whileTap: !isMobile ? "tap" : undefined,
@@ -38441,11 +38458,16 @@ const LanguageSwitcher = () => {
       console.error("changeLanguage method is not available.");
     }
   };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    onClick: () => changeLanguage("uk")
-  }, "\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    onClick: () => changeLanguage("en")
-  }, "English"));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "relative inline-block text-left"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
+    className: "px-4 py-2 bg-amber-500 text-white rounded",
+    onChange: e => changeLanguage(e.target.value)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+    value: "uk"
+  }, "\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+    value: "en"
+  }, "English")));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LanguageSwitcher);
 
@@ -38464,11 +38486,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs");
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var _constants_routes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constants/routes */ "./src/constants/routes.ts");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/Bars3Icon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/XMarkIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/Bars3Icon.js");
+/* harmony import */ var _LanguageSwitcher__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LanguageSwitcher */ "./src/components/LanguageSwitcher.tsx");
+
 
 
 
@@ -38508,23 +38533,16 @@ const Navbar = () => {
     const handleScroll = () => {
       const sections = _constants_routes__WEBPACK_IMPORTED_MODULE_2__.NAV_ITEMS.map(item => item.id);
       const currentScrollY = window.scrollY;
-
-      // Логіка для приховування/показу навбара
       if (currentScrollY > 100) {
         if (currentScrollY > lastScrollY) {
-          // Скрол вниз
           setIsVisible(false);
         } else {
-          // Скрол вгору
           setIsVisible(true);
         }
       } else {
-        // Якщо ми вище 100px, навбар завжди прихований
         setIsVisible(false);
       }
       setLastScrollY(currentScrollY);
-
-      // Логіка для активного розділу
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -38542,7 +38560,7 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.nav, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.nav, {
     initial: {
       y: -100
     },
@@ -38566,12 +38584,14 @@ const Navbar = () => {
     key: item.id,
     onClick: () => scrollToSection(item.id),
     className: `text-lg transition-colors ${activeSection === item.id ? "text-amber-900 font-medium" : "text-amber-700 hover:text-amber-900"}`
-  }, item.name))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    onClick: () => setIsOpen(!isOpen),
+  }, item.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_LanguageSwitcher__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    onClick: toggleMenu,
     className: "md:hidden text-amber-900"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, isOpen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
     className: "h-6 w-6"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_5__.AnimatePresence, null, isOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_3__.motion.div, {
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    className: "h-6 w-6"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.AnimatePresence, null, isOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.div, {
     initial: {
       opacity: 0,
       height: 0
@@ -38594,7 +38614,7 @@ const Navbar = () => {
       setIsOpen(false);
     },
     className: `block w-full text-left px-4 py-2 text-lg transition-colors ${activeSection === item.id ? "text-amber-900 font-medium" : "text-amber-700 hover:text-amber-900"}`
-  }, item.name)))))));
+  }, item.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_LanguageSwitcher__WEBPACK_IMPORTED_MODULE_3__["default"], null))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navbar);
 
@@ -38766,21 +38786,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs");
 /* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/react */ "./node_modules/swiper/swiper-react.mjs");
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/XMarkIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/XMarkIcon.js");
 /* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
 /* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(swiper_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
 /* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(swiper_css_navigation__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
 /* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(swiper_css_pagination__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _images_card1_webp__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/card1.webp */ "./src/images/card1.webp");
-/* harmony import */ var _images_card2_webp__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../images/card2.webp */ "./src/images/card2.webp");
-/* harmony import */ var _images_card3_webp__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../images/card3.webp */ "./src/images/card3.webp");
-/* harmony import */ var _images_card4_webp__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../images/card4.webp */ "./src/images/card4.webp");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gatsby-plugin-react-i18next */ "./node_modules/gatsby-plugin-react-i18next/index.js");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _images_card1_webp__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../images/card1.webp */ "./src/images/card1.webp");
+/* harmony import */ var _images_card2_webp__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../images/card2.webp */ "./src/images/card2.webp");
+/* harmony import */ var _images_card3_webp__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../images/card3.webp */ "./src/images/card3.webp");
+/* harmony import */ var _images_card4_webp__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../images/card4.webp */ "./src/images/card4.webp");
+/* harmony import */ var _images_card5_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../images/card5.jpg */ "./src/images/card5.jpg");
+/* harmony import */ var i18next__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! i18next */ "./node_modules/i18next/dist/esm/i18next.js");
 
 
 
@@ -38793,56 +38817,72 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const products = [{
-  id: 1,
-  name: "Sunflower Bag",
-  category: "women",
-  price: "2500 грн",
-  image: _images_card1_webp__WEBPACK_IMPORTED_MODULE_6__["default"],
-  description: "Універсальний рюкзак з натуральної шкіри",
-  details: "Рюкзак виготовлений з натуральної шкіри високої якості. Має зручні ремені для регулювання та внутрішні відділення для організації речей. Ідеально підходить для щоденних прогулянок та подорожей.",
-  images: [_images_card1_webp__WEBPACK_IMPORTED_MODULE_6__["default"], _images_card2_webp__WEBPACK_IMPORTED_MODULE_7__["default"], _images_card3_webp__WEBPACK_IMPORTED_MODULE_8__["default"], _images_card4_webp__WEBPACK_IMPORTED_MODULE_9__["default"]]
-}, {
-  id: 2,
-  name: "Romantic Dog Bag",
-  category: "children",
-  price: "1800 грн",
-  image: _images_card2_webp__WEBPACK_IMPORTED_MODULE_7__["default"],
-  description: "Елегантна сумка для щоденних прогулянок",
-  details: "Сумка з милим принтом собачки. Виготовлена з міцних матеріалів, має зручну ручку та регульований ремінь. Ідеальна для прогулянок та шопінгу.",
-  images: [_images_card2_webp__WEBPACK_IMPORTED_MODULE_7__["default"], _images_card1_webp__WEBPACK_IMPORTED_MODULE_6__["default"], _images_card3_webp__WEBPACK_IMPORTED_MODULE_8__["default"], _images_card4_webp__WEBPACK_IMPORTED_MODULE_9__["default"]]
-}, {
-  id: 3,
-  name: "Lily-shaped bag",
-  category: "women",
-  price: "2800 грн",
-  image: _images_card3_webp__WEBPACK_IMPORTED_MODULE_8__["default"],
-  description: "Просторний рюкзак для подорожей та походів",
-  details: "Рюкзак у формі лілії з міцних матеріалів. Має водонепроникне покриття та зручні відділення. Ідеально підходить для подорожей та активного відпочинку.",
-  images: [_images_card3_webp__WEBPACK_IMPORTED_MODULE_8__["default"], _images_card1_webp__WEBPACK_IMPORTED_MODULE_6__["default"], _images_card2_webp__WEBPACK_IMPORTED_MODULE_7__["default"], _images_card4_webp__WEBPACK_IMPORTED_MODULE_9__["default"]]
-}, {
-  id: 4,
-  name: "koala children's backpack",
-  category: "children",
-  price: "1500 грн",
-  image: _images_card4_webp__WEBPACK_IMPORTED_MODULE_9__["default"],
-  description: "Компактна сумка для невеликих речей",
-  details: "Рюкзак з принтом коали. Легкий та зручний, має регульовані ремені та відділення для організації речей. Ідеальний для дітей дошкільного та молодшого шкільного віку.",
-  images: [_images_card4_webp__WEBPACK_IMPORTED_MODULE_9__["default"], _images_card1_webp__WEBPACK_IMPORTED_MODULE_6__["default"], _images_card2_webp__WEBPACK_IMPORTED_MODULE_7__["default"], _images_card3_webp__WEBPACK_IMPORTED_MODULE_8__["default"]]
-}
-// Додайте більше товарів тут
-];
+
+
+
 const categories = [{
   id: "all",
-  name: "Всі"
+  name: (0,i18next__WEBPACK_IMPORTED_MODULE_12__.t)("categories.all")
 }, {
   id: "women",
-  name: "Жіночі"
+  name: (0,i18next__WEBPACK_IMPORTED_MODULE_12__.t)("categories.womens")
 }, {
   id: "children",
-  name: "Дітей"
+  name: (0,i18next__WEBPACK_IMPORTED_MODULE_12__.t)("categories.children")
+}, {
+  id: "mom&child",
+  name: (0,i18next__WEBPACK_IMPORTED_MODULE_12__.t)("categories.mom&child")
 }];
 const Products = () => {
+  const {
+    t
+  } = (0,gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_6__.useTranslation)();
+  const products = [{
+    id: 1,
+    name: t("product.sunflower_bag.name"),
+    category: "women",
+    price: t("product.sunflower_bag.price"),
+    image: _images_card1_webp__WEBPACK_IMPORTED_MODULE_7__["default"],
+    description: t("product.sunflower_bag.description"),
+    details: t("product.sunflower_bag.details"),
+    images: [_images_card1_webp__WEBPACK_IMPORTED_MODULE_7__["default"], _images_card2_webp__WEBPACK_IMPORTED_MODULE_8__["default"], _images_card3_webp__WEBPACK_IMPORTED_MODULE_9__["default"], _images_card4_webp__WEBPACK_IMPORTED_MODULE_10__["default"]]
+  }, {
+    id: 2,
+    name: t("product.romantic_dog_bag.name"),
+    category: "children",
+    price: t("product.romantic_dog_bag.price"),
+    image: _images_card2_webp__WEBPACK_IMPORTED_MODULE_8__["default"],
+    description: t("product.romantic_dog_bag.description"),
+    details: t("product.romantic_dog_bag.details"),
+    images: [_images_card2_webp__WEBPACK_IMPORTED_MODULE_8__["default"], _images_card1_webp__WEBPACK_IMPORTED_MODULE_7__["default"], _images_card3_webp__WEBPACK_IMPORTED_MODULE_9__["default"], _images_card4_webp__WEBPACK_IMPORTED_MODULE_10__["default"]]
+  }, {
+    id: 3,
+    name: t("product.lily_shaped_bag.name"),
+    category: "women",
+    price: t("product.lily_shaped_bag.price"),
+    image: _images_card3_webp__WEBPACK_IMPORTED_MODULE_9__["default"],
+    description: t("product.lily_shaped_bag.description"),
+    details: t("product.lily_shaped_bag.details"),
+    images: [_images_card3_webp__WEBPACK_IMPORTED_MODULE_9__["default"], _images_card1_webp__WEBPACK_IMPORTED_MODULE_7__["default"], _images_card2_webp__WEBPACK_IMPORTED_MODULE_8__["default"], _images_card4_webp__WEBPACK_IMPORTED_MODULE_10__["default"]]
+  }, {
+    id: 4,
+    name: t("product.koala_children_backpack.name"),
+    category: "children",
+    price: t("product.koala_children_backpack.price"),
+    image: _images_card4_webp__WEBPACK_IMPORTED_MODULE_10__["default"],
+    description: t("product.koala_children_backpack.description"),
+    details: t("product.koala_children_backpack.details"),
+    images: [_images_card4_webp__WEBPACK_IMPORTED_MODULE_10__["default"], _images_card1_webp__WEBPACK_IMPORTED_MODULE_7__["default"], _images_card2_webp__WEBPACK_IMPORTED_MODULE_8__["default"], _images_card3_webp__WEBPACK_IMPORTED_MODULE_9__["default"]]
+  }, {
+    id: 5,
+    name: t("product.mom_child_bear_set.name"),
+    category: "mom&child",
+    price: t("product.mom_child_bear_set.price"),
+    image: _images_card5_jpg__WEBPACK_IMPORTED_MODULE_11__["default"],
+    description: t("product.mom_child_bear_set.description"),
+    details: t("product.mom_child_bear_set.details"),
+    images: [_images_card5_jpg__WEBPACK_IMPORTED_MODULE_11__["default"], _images_card2_webp__WEBPACK_IMPORTED_MODULE_8__["default"], _images_card3_webp__WEBPACK_IMPORTED_MODULE_9__["default"], _images_card4_webp__WEBPACK_IMPORTED_MODULE_10__["default"]]
+  }];
   const {
     0: activeCategory,
     1: setActiveCategory
@@ -38857,7 +38897,7 @@ const Products = () => {
     className: "py-20 bg-amber-50"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "container mx-auto px-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_10__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_13__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -38875,15 +38915,15 @@ const Products = () => {
     className: "text-center mb-12"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "text-3xl md:text-4xl font-playfair mb-6 text-amber-900"
-  }, "\u041D\u0430\u0448\u0430 \u043F\u0440\u043E\u0434\u0443\u043A\u0446\u0456\u044F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, t("products.title")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-amber-800 text-lg"
-  }, "\u0412\u0456\u0434\u043A\u0440\u0438\u0439\u0442\u0435 \u0434\u043B\u044F \u0441\u0435\u0431\u0435 \u0443\u043D\u0456\u043A\u0430\u043B\u044C\u043D\u0456 \u0432\u0438\u0440\u043E\u0431\u0438 \u0440\u0443\u0447\u043D\u043E\u0457 \u0440\u043E\u0431\u043E\u0442\u0438")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("products.subtitle"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex flex-wrap justify-center gap-4 mb-12"
   }, categories.map(category => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     key: category.id,
     onClick: () => setActiveCategory(category.id),
     className: `px-6 py-2 rounded-full transition-colors ${activeCategory === category.id ? "bg-amber-900 text-white" : "bg-white text-amber-900 hover:bg-amber-100 border border-amber-200"}`
-  }, category.name))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_1__.Swiper, {
+  }, t(`categories.${category.id}`)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_1__.Swiper, {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Pagination],
     spaceBetween: 30,
     slidesPerView: 1,
@@ -38901,7 +38941,7 @@ const Products = () => {
     }
   }, filteredProducts.map(product => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_1__.SwiperSlide, {
     key: product.id
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_10__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_13__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -38937,10 +38977,10 @@ const Products = () => {
   }, product.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     onClick: e => {
       e.stopPropagation();
-      window.open(`https://wa.me/YOUR_PHONE_NUMBER?text=Замовлення: ${product.name}`, "_blank");
+      window.open(`https://wa.me/YOUR_PHONE_NUMBER?text=${t("order")} ${product.name}`, "_blank");
     },
     className: "bg-amber-900 text-white px-4 py-2 rounded-full hover:bg-amber-800 transition-colors"
-  }, "\u0417\u0430\u043C\u043E\u0432\u0438\u0442\u0438"))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_11__.AnimatePresence, null, selectedProduct && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_10__.motion.div, {
+  }, t("order")))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_14__.AnimatePresence, null, selectedProduct && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_13__.motion.div, {
     initial: {
       opacity: 0
     },
@@ -38952,7 +38992,7 @@ const Products = () => {
     },
     className: "fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/50",
     onClick: () => setSelectedProduct(null)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_10__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_13__.motion.div, {
     initial: {
       scale: 0.9,
       opacity: 0
@@ -38971,7 +39011,7 @@ const Products = () => {
     onClick: () => setSelectedProduct(null),
     className: "absolute -top-3 -right-3 sm:top-4 sm:right-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20",
     "aria-label": "\u0417\u0430\u043A\u0440\u0438\u0442\u0438"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_15__["default"], {
     className: "h-8 w-8 text-amber-900 hover:text-amber-700 m-2"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 p-4 sm:p-6"
@@ -38993,25 +39033,17 @@ const Products = () => {
     alt: `${selectedProduct.name} - фото ${index + 1}`,
     className: "w-full h-[300px] sm:h-[400px] object-cover"
   }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "space-y-4 sm:space-y-6"
+    className: "space-y-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-    className: "text-2xl sm:text-3xl font-playfair text-amber-900"
+    className: "text-3xl font-semibold text-amber-900"
   }, selectedProduct.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "text-xl sm:text-2xl font-semibold text-amber-900"
-  }, selectedProduct.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "text-base sm:text-lg text-amber-800"
-  }, selectedProduct.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pt-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
-    className: "text-lg sm:text-xl font-semibold text-amber-900 mb-2"
-  }, "\u041E\u043F\u0438\u0441"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "text-base sm:text-lg text-amber-800"
-  }, selectedProduct.details)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    onClick: () => {
-      window.open(`https://wa.me/YOUR_PHONE_NUMBER?text=Замовлення: ${selectedProduct.name}`, "_blank");
-    },
-    className: "w-full bg-amber-900 text-white px-6 py-3 rounded-full hover:bg-amber-800 transition-colors text-base sm:text-lg font-medium shadow-lg hover:shadow-xl mt-6"
-  }, "\u0417\u0430\u043C\u043E\u0432\u0438\u0442\u0438"))))))));
+    className: "text-lg text-amber-800"
+  }, selectedProduct.details), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "text-xl font-semibold text-amber-900"
+  }, selectedProduct.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    onClick: () => window.open(`https://wa.me/YOUR_PHONE_NUMBER?text=${t("order")} ${selectedProduct.name}`, "_blank"),
+    className: "bg-amber-900 text-white px-6 py-2 rounded-full hover:bg-amber-800 transition-colors"
+  }, t("order")))))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Products);
 
@@ -39030,11 +39062,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs");
 /* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/react */ "./node_modules/swiper/swiper-react.mjs");
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/XMarkIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/XMarkIcon.js");
 /* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/css */ "./node_modules/swiper/swiper.css");
 /* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(swiper_css__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var swiper_css_navigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/css/navigation */ "./node_modules/swiper/modules/navigation.css");
@@ -39042,6 +39074,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/css/pagination */ "./node_modules/swiper/modules/pagination.css");
 /* harmony import */ var swiper_css_pagination__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(swiper_css_pagination__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _images_User_Profile_Icon_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/User Profile Icon.png */ "./src/images/User Profile Icon.png");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! gatsby-plugin-react-i18next */ "./node_modules/gatsby-plugin-react-i18next/index.js");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -39051,36 +39085,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const reviews = [{
-  id: 1,
-  name: "Анна Петренко",
-  imageReviewer: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
-  text: "Чудова якість та увага до деталей! Мій рюкзак виглядає просто чарівно і дуже зручний у використанні.",
-  rating: 5,
-  imageReview: "https://placehold.co/500x400"
-}, {
-  id: 2,
-  name: "Максим Коваленко",
-  imageReviewer: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
-  text: "Замовляв індивідуальну сумку. Результат перевершив всі мої очікування. Рекомендую!",
-  rating: 5,
-  imageReview: "https://placehold.co/500x400"
-}, {
-  id: 3,
-  name: "Олена Сидоренко",
-  imageReviewer: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop",
-  text: "Дуже задоволена якістю та швидкістю виготовлення. Сумка вийшла просто чудова!",
-  rating: 5,
-  imageReview: "https://placehold.co/500x400"
-}, {
-  id: 4,
-  name: "Іван Мельник",
-  imageReviewer: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
-  text: "Відмінна робота! Рюкзак виготовлений з дотриманням всіх моїх побажань. Дякую!",
-  rating: 5,
-  imageReview: "https://placehold.co/500x400"
-}];
+
 const Reviews = () => {
+  const {
+    t
+  } = (0,gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_7__.useTranslation)();
   const {
     0: isBlured,
     1: setIsBlured
@@ -39093,12 +39102,41 @@ const Reviews = () => {
     0: selectedReview,
     1: setSelectedReview
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  const reviews = [{
+    id: 1,
+    name: t("reviews.name1"),
+    imageReviewer: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
+    text: t("reviews.text1"),
+    rating: 5,
+    imageReview: "https://placehold.co/500x400"
+  }, {
+    id: 2,
+    name: t("reviews.name2"),
+    imageReviewer: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
+    text: t("reviews.text2"),
+    rating: 5,
+    imageReview: "https://placehold.co/500x400"
+  }, {
+    id: 3,
+    name: t("reviews.name3"),
+    imageReviewer: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop",
+    text: t("reviews.text3"),
+    rating: 5,
+    imageReview: "https://placehold.co/500x400"
+  }, {
+    id: 4,
+    name: t("reviews.name4"),
+    imageReviewer: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
+    text: t("reviews.text4"),
+    rating: 5,
+    imageReview: "https://placehold.co/500x400"
+  }];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     id: "reviews",
     className: "py-20 bg-amber-50"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "container mx-auto px-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -39116,9 +39154,9 @@ const Reviews = () => {
     className: "text-center mb-12"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "text-3xl md:text-4xl font-playfair mb-6 text-amber-900"
-  }, "\u0412\u0456\u0434\u0433\u0443\u043A\u0438 \u043D\u0430\u0448\u0438\u0445 \u043A\u043B\u0456\u0454\u043D\u0442\u0456\u0432"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, t("reviewsTitle"), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-amber-800 text-lg"
-  }, "\u0429\u043E \u043A\u0430\u0436\u0443\u0442\u044C \u043F\u0440\u043E \u043D\u0430\u0441 \u0442\u0456, \u0445\u0442\u043E \u0432\u0436\u0435 \u043F\u0440\u0438\u0434\u0431\u0430\u0432 \u043D\u0430\u0448\u0456 \u0432\u0438\u0440\u043E\u0431\u0438")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_1__.Swiper, {
+  }, t("reviewsSubtitle"), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_1__.Swiper, {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Pagination],
     spaceBetween: 20,
     slidesPerView: 1,
@@ -39137,7 +39175,7 @@ const Reviews = () => {
     className: "px-4 sm:px-6 md:px-8"
   }, reviews.map(review => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_1__.SwiperSlide, {
     key: review.id
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -39184,7 +39222,7 @@ const Reviews = () => {
   })))))), isBlured && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "fixed inset-0 bg-gray-500 bg-opacity-50 backdrop-blur-sm z-10",
     onClick: () => setIsBlured(false)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.AnimatePresence, null, selectedImage && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.motion.div, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_9__.AnimatePresence, null, selectedImage && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.motion.div, {
     initial: {
       y: "100%",
       opacity: 0
@@ -39204,7 +39242,7 @@ const Reviews = () => {
     },
     className: "fixed inset-0 z-20 flex items-center justify-center p-4 w-full h-auto min-h-[60vh] rounded-t-3xl",
     onClick: () => setSelectedImage(null)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.motion.div, {
     initial: {
       scale: 0.95,
       opacity: 0
@@ -39226,7 +39264,7 @@ const Reviews = () => {
     },
     className: "absolute -top-10 right-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20 mb-2",
     "aria-label": "\u0417\u0430\u043A\u0440\u0438\u0442\u0438"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_10__["default"], {
     className: "h-6 w-6 text-amber-900 hover:text-amber-700 "
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "text-center mb-4"
@@ -39250,7 +39288,7 @@ const Reviews = () => {
     src: selectedImage,
     alt: "\u0424\u043E\u0442\u043E \u043A\u043B\u0456\u0454\u043D\u0442\u0430",
     className: "w-full max-w-md h-auto rounded-lg shadow-2xl"
-  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.motion.div, {
+  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -39272,7 +39310,7 @@ const Reviews = () => {
     target: "_blank",
     rel: "noopener noreferrer",
     className: "inline-flex items-center text-amber-900 hover:text-amber-800"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.motion.span, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.motion.span, {
     animate: {
       y: [0, -10, 0]
     },
@@ -39282,7 +39320,7 @@ const Reviews = () => {
       repeat: Infinity
     },
     className: "mr-2 underline"
-  }, "\u0411\u0456\u043B\u044C\u0448\u0435 \u0432\u0456\u0434\u0433\u0443\u043A\u0456\u0432 \u043D\u0430 Instagram"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.motion.svg, {
+  }, "\u0411\u0456\u043B\u044C\u0448\u0435 \u0432\u0456\u0434\u0433\u0443\u043A\u0456\u0432 \u043D\u0430 Instagram"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.motion.svg, {
     animate: {
       y: [0, -10, 0]
     },
@@ -39413,6 +39451,41 @@ const WhyChooseUs = () => {
 
 /***/ }),
 
+/***/ "./src/components/heroLanguageSwitcher.tsx":
+/*!*************************************************!*\
+  !*** ./src/components/heroLanguageSwitcher.tsx ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! i18next */ "./node_modules/i18next/dist/esm/i18next.js");
+
+
+const HeroLanguageSwitcher = () => {
+  const handleLanguageChange = event => {
+    (0,i18next__WEBPACK_IMPORTED_MODULE_1__.changeLanguage)(event.target.checked ? "en" : "uk");
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    className: "relative inline-flex cursor-pointer items-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "checkbox",
+    value: "",
+    onChange: handleLanguageChange,
+    className: "peer sr-only"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "peer flex h-14 items-center gap-5 rounded-full bg-amber-500 px-6 after:absolute after:left-3 after:h-10 after:w-12 after:rounded-full after:bg-amber-300 after:transition-all after:content-[''] peer-checked:bg-amber-700 peer-checked:after:translate-x-full peer-focus:outline-none text-lg text-white"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "UK"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "EN")));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeroLanguageSwitcher);
+
+/***/ }),
+
 /***/ "./src/constants/routes.ts":
 /*!*********************************!*\
   !*** ./src/constants/routes.ts ***!
@@ -39532,6 +39605,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/images/card5.jpg":
+/*!******************************!*\
+  !*** ./src/images/card5.jpg ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/static/card5-32b8a434da7bb9d49a1a22895ccb50a3.jpg");
+
+/***/ }),
+
 /***/ "./src/locales/en/translation.json":
 /*!*****************************************!*\
   !*** ./src/locales/en/translation.json ***!
@@ -39539,7 +39627,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"hero":{"title":"Rovenets - unique handmade products","subtitle":"Handmade bags and backpacks from natural materials"},"about":{"title":"About us","description":"We create unique products from natural materials..."},"products":{"title":"Our Products"},"contact":{"title":"Contact us","name":"Name","email":"Email","message":"Message","send":"Send"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"hero":{"title":"Rovenets - unique handmade products","subtitle":"Handmade bags and backpacks from natural materials","description":"We create unique products from natural materials, designed with care and passion. Each item is handcrafted to ensure quality and style.","catalogButton":"Browse our catalog","contactButton":"Contact us"},"about":{"title":"About Us","description_1":"We create unique handmade products with love and attention to detail, ensuring top-quality materials are carefully chosen for each bag and backpack.","description_2":"Our mission is to create not just accessories, but unique pieces that become part of your story and an expression of your individuality.","experience":"5+ Years of Experience","clients":"100+ Satisfied Clients","values":{"sustainability":{"title":"Sustainability","description":"Eco-friendly materials and responsible production"},"handmade":{"title":"Handmade","description":"Each product is made by hand with love"},"custom_orders":{"title":"Custom Orders","description":"Custom orders for your unique needs"}}},"products":{"title":"Our Products","subtitle":"Discover unique handmade items","all":"All","women":"Women\'s","children":"Children\'s","order":"Order","modal":{"close":"Close","description":"Description"}},"categories":{"children":"Children","women":"Women\'s","all":"All","mom&child":"Mom & Child"},"product":{"name":"Name","price":"Price","description":"Description","details":"Details","sunflower_bag":{"name":"Sunflower Bag","category":"Women","price":"2500 UAH","description":"A versatile leather backpack","details":"The backpack is made of high-quality genuine leather. It has adjustable straps and internal compartments for organizing your things. Perfect for daily walks and travel."},"mom_child_bear_set":{"name":"Mom and Child Bear Bag Set","price":"1200 UAH","category":"mom&child","description":"A stylish and convenient bag set for moms and kids, decorated with a cute bear.","details":"The set includes two bags: a large one for the mom and a small one for the child. Made of high-quality materials, featuring comfortable straps and multiple compartments."},"romantic_dog_bag":{"name":"Romantic Dog Bag","category":"Children","price":"1800 UAH","description":"An elegant bag for everyday walks","details":"A bag with a cute dog print. Made of durable materials, it has a comfortable handle and an adjustable strap. Ideal for walks and shopping."},"lily_shaped_bag":{"name":"Lily-shaped Bag","category":"Women","price":"2800 UAH","description":"A spacious backpack for travel and hiking","details":"A lily-shaped backpack made of durable materials. It has a waterproof coating and comfortable compartments. Perfect for traveling and active recreation."},"koala_children_backpack":{"name":"Koala Children\'s Backpack","category":"Children","price":"1500 UAH","description":"A compact bag for small items","details":"A backpack with a koala print. Lightweight and comfortable, it has adjustable straps and compartments for organizing your things. Ideal for preschool and early school-age children."}},"reviews":[{"id":1,"name1":"Anna Petrenko","text1":"Excellent quality and attention to detail! My backpack looks simply charming and is very convenient to use."},{"id":2,"name2":"Maksym Kovalenko","text2":"Ordered a custom bag. The result exceeded all my expectations. Highly recommend!"},{"id":3,"name3":"Olena Sydorenko","text3":"Very satisfied with the quality and production speed. The bag turned out just wonderful!"},{"id":4,"name4":"Ivan Melnyk","text4":"Great job! The backpack was made according to all my wishes. Thank you!"}]}');
 
 /***/ }),
 
@@ -39550,7 +39638,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"hero":{"title":"Rovenets - unique ha
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"hero":{"title":"Ровенець - унікальні вироби ручної роботи","subtitle":"Handmade сумки та рюкзаки з натуральних матеріалів"},"about":{"title":"Про нас","description":"Ми створюємо унікальні вироби з натуральних матеріалів..."},"products":{"title":"Наші вироби"},"contact":{"title":"Зв\'яжіться з нами","name":"Ім\'я","email":"Електронна пошта","message":"Повідомлення","send":"Надіслати"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"hero":{"title":"Rovenets - унікальні вироби ручної роботи","subtitle":"Ручні сумки та рюкзаки з натуральних матеріалів","description":"Ми створюємо унікальні вироби з натуральних матеріалів, продумані з увагою та пристрастю. Кожен виріб виготовлений вручну для забезпечення якості та стилю.","catalogButton":"Переглянути каталог","contactButton":"Зв\'язатися з нами"},"about":{"title":"Про нас","description_1":"Ми створюємо унікальні вироби ручної роботи з любов\'ю до деталей та увагою до якості. Кожна сумка та рюкзак - це результат творчого підходу та ретельного підбору матеріалів.","description_2":"Наша місія - створювати не просто аксесуари, а унікальні вироби, які стануть частиною вашої історії та виразом вашої індивідуальності.","experience":"5+ Років досвіду","clients":"100+ Задоволених клієнтів","values":{"sustainability":{"title":"Екологічність","description":"Екологічні матеріали та відповідальне виробництво"},"handmade":{"title":"Ручна робота","description":"Кожен виріб зроблений вручну з любов\'ю"},"custom_orders":{"title":"Індивідуальні замовлення","description":"Індивідуальні замовлення для ваших унікальних потреб"}}},"categories":{"children":"Дитячі","women":"Жіночі","all":"Всі","mom&child":"Мама та дитина"},"products":{"title":"Наша продукція","subtitle":"Відкрийте для себе унікальні вироби ручної роботи","all":"Всі","women":"Жіночі","children":"Дітей","order":"Замовити","modal":{"close":"Закрити","description":"Опис"}},"product":{"name":"Назва","price":"Ціна","description":"Опис","details":"Деталі","sunflower_bag":{"name":"Sunflower Bag","category":"Жіночі","price":"2500 грн","description":"Універсальний рюкзак з натуральної шкіри","details":"Рюкзак виготовлений з натуральної шкіри високої якості. Має зручні ремені для регулювання та внутрішні відділення для організації речей. Ідеально підходить для щоденних прогулянок та подорожей."},"mom_child_bear_set":{"name":"Набір сумка для мами та дитини з ведмедиком","category":"Мама та дитина","price":"5200 грн","description":"Стильний та зручний набір сумок для мами та дитини, прикрашений милим ведмедиком.","details":"У набір входять дві сумки: велика для мами та маленька для дитини. Виконані з якісних матеріалів, мають зручні ремінці та багато відділень."},"romantic_dog_bag":{"name":"Романтична Сумка з Собачкою","category":"Дітей","price":"1800 грн","description":"Елегантна сумка для щоденних прогулянок","details":"Сумка з милим принтом собачки. Виготовлена з міцних матеріалів, має зручну ручку та регульований ремінь. Ідеальна для прогулянок та шопінгу."},"lily_shaped_bag":{"name":"Сумка у Формі Лілії","category":"Жіночі","price":"2800 грн","description":"Просторний рюкзак для подорожей та походів","details":"Рюкзак у формі лілії з міцних матеріалів. Має водонепроникне покриття та зручні відділення. Ідеально підходить для подорожей та активного відпочинку."},"koala_children_backpack":{"name":"Дитячий Рюкзак з Коалою","category":"Дітей","price":"1500 грн","description":"Компактна сумка для невеликих речей","details":"Рюкзак з принтом коали. Легкий та зручний, має регульовані ремені та відділення для організації речей. Ідеальний для дітей дошкільного та молодшого шкільного віку."}},"reviews":[{"id":1,"name1":"Анна Петренко","text1":"Чудова якість та увага до деталей! Мій рюкзак виглядає просто чарівно і дуже зручний у використанні."},{"id":2,"name2":"Максим Коваленко","text2":"Замовляв індивідуальну сумку. Результат перевершив всі мої очікування. Рекомендую!"},{"id":3,"name3":"Олена Сидоренко","text3":"Дуже задоволена якістю та швидкістю виготовлення. Сумка вийшла просто чудова!"},{"id":4,"name4":"Іван Мельник","text4":"Відмінна робота! Рюкзак виготовлений з дотриманням всіх моїх побажань. Дякую!"}]}');
 
 /***/ }),
 
@@ -39578,8 +39666,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Contact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Contact */ "./src/components/Contact.tsx");
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Footer */ "./src/components/Footer.tsx");
 /* harmony import */ var _components_Navbar__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Navbar */ "./src/components/Navbar.tsx");
-/* harmony import */ var _components_LanguageSwitcher__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/LanguageSwitcher */ "./src/components/LanguageSwitcher.tsx");
-/* harmony import */ var _utils_i18n__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../utils/i18n */ "./src/utils/i18n.ts");
+/* harmony import */ var _utils_i18n__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../utils/i18n */ "./src/utils/i18n.ts");
 // src/pages/index.js
 
 
@@ -39592,13 +39679,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // Імпортуємо компонент
+// Імпортуємо компонент
 
 const IndexPage = () => {
   const {
     t
   } = (0,gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__.useTranslation)();
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_LanguageSwitcher__WEBPACK_IMPORTED_MODULE_11__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_10__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Hero__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_About__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Products__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Reviews__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_WhyChooseUs__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_OrderShipping__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Contact__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Navbar__WEBPACK_IMPORTED_MODULE_10__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Hero__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_About__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Products__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Reviews__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_WhyChooseUs__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_OrderShipping__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Contact__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_9__["default"], null));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IndexPage);
 
@@ -39633,11 +39720,9 @@ i18next__WEBPACK_IMPORTED_MODULE_0__["default"].use(react_i18next__WEBPACK_IMPOR
     }
   },
   lng: "uk",
-  // мова за замовчуванням
   fallbackLng: "en",
-  // запасна мова
   interpolation: {
-    escapeValue: false // не потрібно екранізувати значення
+    escapeValue: false
   }
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (i18next__WEBPACK_IMPORTED_MODULE_0__["default"]);

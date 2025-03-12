@@ -11,6 +11,7 @@ import card1 from "../images/card1.webp";
 import card2 from "../images/card2.webp";
 import card3 from "../images/card3.webp";
 import card4 from "../images/card4.webp";
+import card5 from "../images/card5.jpg";
 import { t } from "i18next";
 
 interface Product {
@@ -24,61 +25,71 @@ interface Product {
   images: string[];
 }
 
-const products: Product[] = [
-  {
-    id: 1,
-    name: "Sunflower Bag",
-    category: "women",
-    price: "2500 грн",
-    image: card1,
-    description: "Універсальний рюкзак з натуральної шкіри",
-    details:
-      "Рюкзак виготовлений з натуральної шкіри високої якості. Має зручні ремені для регулювання та внутрішні відділення для організації речей. Ідеально підходить для щоденних прогулянок та подорожей.",
-    images: [card1, card2, card3, card4],
-  },
-  {
-    id: 2,
-    name: "Romantic Dog Bag",
-    category: "children",
-    price: "1800 грн",
-    image: card2,
-    description: "Елегантна сумка для щоденних прогулянок",
-    details:
-      "Сумка з милим принтом собачки. Виготовлена з міцних матеріалів, має зручну ручку та регульований ремінь. Ідеальна для прогулянок та шопінгу.",
-    images: [card2, card1, card3, card4],
-  },
-  {
-    id: 3,
-    name: "Lily-shaped bag",
-    category: "women",
-    price: "2800 грн",
-    image: card3,
-    description: "Просторний рюкзак для подорожей та походів",
-    details:
-      t("products.lily_shaped_bag.details"),
-    images: [card3, card1, card2, card4],
-  },
-  {
-    id: 4,
-    name: "Koala children's backpack",
-    category: "children",
-    price: "1500 грн",
-    image: card4,
-    description: "Компактна сумка для невеликих речей",
-    details:
-      "Рюкзак з принтом коали. Легкий та зручний, має регульовані ремені та відділення для організації речей. Ідеальний для дітей дошкільного та молодшого шкільного віку.",
-    images: [card4, card1, card2, card3],
-  },
-];
+
 
 const categories = [
-  { id: "all", name: "Всі" },
-  { id: "women", name: "Жіночі" },
-  { id: "children", name: "Дітей" },
+  { id: "all", name: t("categories.all") },
+  { id: "women", name: t("categories.womens") },
+  { id: "children", name: t("categories.children") },
+  { id: "mom&child", name: t("categories.mom&child") },
 ];
 
 const Products = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(); 
+
+  const products: Product[] = [
+    {
+      id: 1,
+      name: t("product.sunflower_bag.name"),
+      category: "women",
+      price: t("product.sunflower_bag.price"),
+      image: card1,
+      description: t("product.sunflower_bag.description"),
+      details: t("product.sunflower_bag.details"),
+      images: [card1, card2, card3, card4],
+    },
+    {
+      id: 2,
+      name: t("product.romantic_dog_bag.name"),
+      category: "children",
+      price: t("product.romantic_dog_bag.price"),
+      image: card2,
+      description: t("product.romantic_dog_bag.description"),
+      details: t("product.romantic_dog_bag.details"),
+      images: [card2, card1, card3, card4],
+    },
+    {
+      id: 3,
+      name: t("product.lily_shaped_bag.name"),
+      category: "women",
+      price: t("product.lily_shaped_bag.price"),
+      image: card3,
+      description: t("product.lily_shaped_bag.description"),
+      details: t("product.lily_shaped_bag.details"),
+      images: [card3, card1, card2, card4],
+    },
+    {
+      id: 4,
+      name: t("product.koala_children_backpack.name"),
+      category: "children",
+      price: t("product.koala_children_backpack.price"),
+      image: card4,
+      description: t("product.koala_children_backpack.description"),
+      details: t("product.koala_children_backpack.details"),
+      images: [card4, card1, card2, card3],
+    },
+    {
+      id: 5,
+      name: t("product.mom_child_bear_set.name"),
+      category: "mom&child",
+      price: t("product.mom_child_bear_set.price"),
+      image: card5,
+      description: t("product.mom_child_bear_set.description"),
+      details: t("product.mom_child_bear_set.details"),
+      images: [card5, card2, card3, card4],
+    },
+  ];
+  
   const [activeCategory, setActiveCategory] = useState("all");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 

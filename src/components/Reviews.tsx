@@ -3,55 +3,66 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { Review } from "../types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import userIcon from "../images/User Profile Icon.png";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
-const reviews = [
-  {
-    id: 1,
-    name: "Анна Петренко",
-    imageReviewer:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
-    text: "Чудова якість та увага до деталей! Мій рюкзак виглядає просто чарівно і дуже зручний у використанні.",
-    rating: 5,
-    imageReview: "https://placehold.co/500x400",
-  },
-  {
-    id: 2,
-    name: "Максим Коваленко",
-    imageReviewer:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
-    text: "Замовляв індивідуальну сумку. Результат перевершив всі мої очікування. Рекомендую!",
-    rating: 5,
-    imageReview: "https://placehold.co/500x400",
-  },
-  {
-    id: 3,
-    name: "Олена Сидоренко",
-    imageReviewer:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop",
-    text: "Дуже задоволена якістю та швидкістю виготовлення. Сумка вийшла просто чудова!",
-    rating: 5,
-    imageReview: "https://placehold.co/500x400",
-  },
-  {
-    id: 4,
-    name: "Іван Мельник",
-    imageReviewer:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
-    text: "Відмінна робота! Рюкзак виготовлений з дотриманням всіх моїх побажань. Дякую!",
-    rating: 5,
-    imageReview: "https://placehold.co/500x400",
-  },
-];
+interface Review {
+  id: number;
+  name: string;
+  imageReviewer: string;
+  text: string;
+  rating: number;
+  imageReview: string;
+}
 
 const Reviews = () => {
+  const { t } = useTranslation();
   const [isBlured, setIsBlured] = useState<boolean>(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedReview, setSelectedReview] = useState<Review | null>(null);
+
+  // Формуємо відгуки з перекладів
+  const reviews = [
+    {
+      id: 1,
+      name: t("reviews.0.name1"),
+      imageReviewer:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
+      text: t("reviews.0.text1"),
+      rating: 5,
+      imageReview: "https://placehold.co/500x400",
+    },
+    {
+      id: 2,
+      name: t("reviews.1.name2"),
+      imageReviewer:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
+      text: t("reviews.1.text2"),
+      rating: 5,
+      imageReview: "https://placehold.co/500x400",
+    },
+    {
+      id: 3,
+      name: t("reviews.2.name3"),
+      imageReviewer:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop",
+      text: t("reviews.2.text3"),
+      rating: 5,
+      imageReview: "https://placehold.co/500x400",
+    },
+    {
+      id: 4,
+      name: t("reviews.3.name4"),
+      imageReviewer:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
+      text: t("reviews.3.text4"),
+      rating: 5,
+      imageReview: "https://placehold.co/500x400",
+    },
+  ];
 
   return (
     <section id="reviews" className="py-20 bg-amber-50">
@@ -64,11 +75,9 @@ const Reviews = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-playfair mb-6 text-amber-900">
-            Відгуки наших клієнтів
+            {t("reviews.title")}
           </h2>
-          <p className="text-amber-800 text-lg">
-            Що кажуть про нас ті, хто вже придбав наші вироби
-          </p>
+          <p className="text-amber-800 text-lg">{t("reviews.subtitle")}</p>
         </motion.div>
 
         <Swiper
@@ -168,7 +177,7 @@ const Reviews = () => {
                     setIsBlured(false);
                   }}
                   className="absolute -top-10 right-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20 mb-2"
-                  aria-label="Закрити"
+                  aria-label={String(t("reviews.close"))}
                 >
                   <XMarkIcon className="h-6 w-6 text-amber-900 hover:text-amber-700 " />
                 </button>
@@ -198,7 +207,7 @@ const Reviews = () => {
                   <div className="flex justify-center">
                     <img
                       src={selectedImage}
-                      alt="Фото клієнта"
+                      alt={String(t("reviews.photo"))}
                       className="w-full max-w-md h-auto rounded-lg shadow-2xl"
                     />
                   </div>
@@ -230,7 +239,7 @@ const Reviews = () => {
               }}
               className="mr-2 underline"
             >
-              Більше відгуків на Instagram
+              {t("reviews.more_on_instagram")}
             </motion.span>
 
             <motion.svg
@@ -252,5 +261,4 @@ const Reviews = () => {
     </section>
   );
 };
-
 export default Reviews;
