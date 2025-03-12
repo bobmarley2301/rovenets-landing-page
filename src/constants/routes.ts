@@ -6,7 +6,8 @@ export const SECTIONS: Record<string, SectionId> = {
   ABOUT: "about",
   CONTACTS: "contact",
   REVIEWS: "reviews",
-  ORDER: "order-shipping",
+  ORDER: "orderShipping",
+  WHY_CHOOSE_US: "why-us",
 } as const;
 
 export const NAV_ITEMS: NavItem[] = [

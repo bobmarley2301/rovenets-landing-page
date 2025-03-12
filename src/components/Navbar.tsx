@@ -5,8 +5,10 @@ import { NAV_ITEMS, SCROLL_OFFSET } from "../constants/routes";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { SectionId } from "../types";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<SectionId>("home");
   const [isVisible, setIsVisible] = useState(false);
@@ -62,6 +64,34 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  // Функція для отримання перекладу для навігаційних елементів
+  const getTranslatedName = (itemId: SectionId) => {
+    return t(`navigation.${itemId}`, getDefaultName(itemId));
+  };
+
+  // Функція для отримання запасного імені, якщо переклад відсутній
+  const getDefaultName = (itemId: SectionId): string => {
+    // Використовуйте типово безпечний запис з явним переліком всіх можливих значень SectionId
+    switch (itemId) {
+      case "home":
+        return "Головна";
+      case "about":
+        return "Про нас";
+      case "products":
+        return "Продукція";
+      case "whyChooseUs":
+        return "Чому ми";
+      case "orderShipping":
+        return "Замовлення";
+      case "contact":
+        return "Контакти";
+      case "reviews":
+        return "Відгуки";
+      default:
+        return itemId;
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -86,7 +116,7 @@ const Navbar = () => {
                     : "text-amber-700 hover:text-amber-900"
                 }`}
               >
-                {item.name}
+                {getTranslatedName(item.id)}
               </button>
             ))}
             <LanguageSwitcher />
@@ -95,6 +125,11 @@ const Navbar = () => {
           <button
             onClick={toggleMenu}
             className="md:hidden text-amber-900"
+            aria-label={
+              isOpen
+                ? (t("navigation.close", "Закрити меню") as string)
+                : (t("navigation.open", "Відкрити меню") as string)
+            }
           >
             {isOpen ? (
               <XMarkIcon className="h-6 w-6" />
@@ -126,10 +161,12 @@ const Navbar = () => {
                         : "text-amber-700 hover:text-amber-900"
                     }`}
                   >
-                    {item.name}
+                    {getTranslatedName(item.id)}
                   </button>
                 ))}
-                <LanguageSwitcher />
+                <div className="px-4">
+                  <LanguageSwitcher />
+                </div>
               </div>
             </motion.div>
           )}

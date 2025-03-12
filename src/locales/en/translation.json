@@ -1,4 +1,14 @@
 {
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "whyChooseUs": "Why Us",
+    "order-shipping": "Ordering",
+    "contact": "Contact",
+    "open": "Open menu",
+    "close": "Close menu"
+  },
   "hero": {
     "title": "Rovenets - unique handmade products",
     "subtitle": "Handmade bags and backpacks from natural materials",
@@ -216,5 +226,19 @@
       },
       "submit": "Send"
     }
+  },
+  "footer": {
+    "contacts": "Contacts",
+    "socialTitle": "Social Media",
+    "social.instagram": "Instagram",
+    "social.facebook": "Facebook",
+    "social.telegram": "Telegram",
+    "workingHours": {
+      "title": "Working Hours",
+      "weekdays": "Mon-Fri: 10:00 AM - 7:00 PM",
+      "saturday": "Sat: 11:00 AM - 5:00 PM",
+      "sunday": "Sun: Closed"
+    },
+    "copyright": "All rights reserved."
   }
 }

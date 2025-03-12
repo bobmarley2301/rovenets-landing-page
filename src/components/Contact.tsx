@@ -9,7 +9,7 @@ import {
 
 const Contact = () => {
   const { t } = useTranslation();
-
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -70,10 +70,7 @@ const Contact = () => {
                     {t("contact.info.phone.label", "Телефон")}
                   </h4>
                   <a
-                    href={`tel:${t(
-                      "contact.info.phone.value",
-                      "+380991234567"
-                    )}`}
+                    href={`tel:${t("contact.info.phone.value", "+380991234567")}`}
                     className="text-amber-800 hover:text-amber-900"
                   >
                     {t("contact.info.phone.display", "+38 (099) 123-45-67")}
@@ -87,10 +84,7 @@ const Contact = () => {
                     {t("contact.info.email.label", "Email")}
                   </h4>
                   <a
-                    href={`mailto:${t(
-                      "contact.info.email.value",
-                      "info@rovenets.com"
-                    )}`}
+                    href={`mailto:${t("contact.info.email.value", "info@rovenets.com")}`}
                     className="text-amber-800 hover:text-amber-900"
                   >
                     {t("contact.info.email.display", "info@rovenets.com")}
@@ -104,10 +98,7 @@ const Contact = () => {
                     {t("contact.info.address.label", "Адреса")}
                   </h4>
                   <p className="text-amber-800">
-                    {t(
-                      "contact.info.address.value",
-                      "м. Київ, вул. Прикладна, 1"
-                    )}
+                    {t("contact.info.address.value", "м. Київ, вул. Прикладна, 1")}
                   </p>
                 </div>
               </div>
