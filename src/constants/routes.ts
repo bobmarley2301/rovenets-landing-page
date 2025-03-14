@@ -6,7 +6,7 @@ export const SECTIONS: Record<string, SectionId> = {
   ABOUT: "about",
   CONTACTS: "contact",
   REVIEWS: "reviews",
-  ORDER: "orderShipping",
+  ORDER: "order-shipping",
   WHY_CHOOSE_US: "why-us", // Змінено з "why-us" на "whyChooseUs"
 } as const;
 

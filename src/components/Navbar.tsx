@@ -81,7 +81,7 @@ const Navbar = () => {
         return "Продукція";
       case "why-us": // Змінено з "why-us" на "whyChooseUs"
         return "Чому ми";
-      case "orderShipping":
+      case "order-shipping":
         return "Замовлення";
       case "contact":
         return "Контакти";
