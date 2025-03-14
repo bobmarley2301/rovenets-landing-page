@@ -53,8 +53,7 @@
     "children": "Children",
     "women": "Women's",
     "all": "All",
-    "mom&child": "Mom & Child",
-    "additionally": "Care Products"
+    "mom&child": "Mom & Child"
   },
   "product": {
     "name": "Name",
@@ -95,40 +94,33 @@
       "price": "1500 UAH",
       "description": "A compact bag for small items",
       "details": "A backpack with a koala print. Lightweight and comfortable, it has adjustable straps and compartments for organizing your things. Ideal for preschool and early school-age children."
-    },
-    "aditional": {
-      "name": "Leather Care Shampoo",
-      "category": "Accessories",
-      "price": "350 UAH",
-      "description": "Special cleansing formula for leather products care",
-      "details": "Our premium leather care shampoo is specially formulated to clean and nourish all types of leather products. The gentle formula removes dirt and stains while preserving the natural oils in the leather. Regular use helps extend the life of your bags, backpacks, and other leather items, keeping them soft, supple, and beautiful for years to come. Contains no harsh chemicals and is environmentally friendly."
     }
   },
   "reviews": {
     "title": "Customer Reviews",
-    "subtitle": "See what our customers are saying about us",
+    "subtitle": "See what our customers say about us",
     "close": "Close",
     "photo": "Customer photo",
     "more_on_instagram": "More reviews on Instagram",
     "0": {
       "id": 1,
-      "name1": "Anna Petrenko",
-      "text1": "Excellent quality and attention to detail! My backpack looks simply charming and is very convenient to use."
+      "name": "Anna Petrenko",
+      "text": "Excellent quality and attention to detail! My backpack looks simply charming and is very convenient to use."
     },
     "1": {
       "id": 2,
-      "name2": "Maksym Kovalenko",
-      "text2": "Ordered a custom bag. The result exceeded all my expectations. Highly recommend!"
+      "name": "Maksym Kovalenko",
+      "text": "Ordered a custom bag. The result exceeded all my expectations. Highly recommend!"
     },
     "2": {
       "id": 3,
-      "name3": "Olena Sydorenko",
-      "text3": "Very satisfied with the quality and production speed. The bag turned out just wonderful!"
+      "name": "Olena Sydorenko",
+      "text": "Very satisfied with the quality and production speed. The bag turned out just wonderful!"
     },
     "3": {
       "id": 4,
-      "name4": "Ivan Melnyk",
-      "text4": "Great job! The backpack was made according to all my wishes. Thank you!"
+      "name": "Ivan Melnyk",
+      "text": "Great job! The backpack was made according to all my wishes. Thank you!"
     }
   },
   "whyChooseUs": {

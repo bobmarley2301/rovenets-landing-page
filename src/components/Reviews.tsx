@@ -6,7 +6,6 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import userIcon from "../images/User Profile Icon.png";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 interface Review {
@@ -20,45 +19,43 @@ interface Review {
 
 const Reviews = () => {
   const { t } = useTranslation();
-  const [isBlured, setIsBlured] = useState<boolean>(false);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [selectedReview, setSelectedReview] = useState<Review | null>(null);
 
   // Формуємо відгуки з перекладів
   const reviews = [
     {
       id: 1,
-      name: t("reviews.0.name1"),
+      name: t("reviews.0.name"),
       imageReviewer:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
-      text: t("reviews.0.text1"),
+      text: t("reviews.0.text"),
       rating: 5,
       imageReview: "https://placehold.co/500x400",
     },
     {
       id: 2,
-      name: t("reviews.1.name2"),
+      name: t("reviews.1.name"),
       imageReviewer:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
-      text: t("reviews.1.text2"),
+      text: t("reviews.1.text"),
       rating: 5,
       imageReview: "https://placehold.co/500x400",
     },
     {
       id: 3,
-      name: t("reviews.2.name3"),
+      name: t("reviews.2.name"),
       imageReviewer:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop",
-      text: t("reviews.2.text3"),
+      text: t("reviews.2.text"),
       rating: 5,
       imageReview: "https://placehold.co/500x400",
     },
     {
       id: 4,
-      name: t("reviews.3.name4"),
+      name: t("reviews.3.name"),
       imageReviewer:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
-      text: t("reviews.3.text4"),
+      text: t("reviews.3.text"),
       rating: 5,
       imageReview: "https://placehold.co/500x400",
     },
@@ -104,7 +101,7 @@ const Reviews = () => {
                 <div className="flex items-center gap-4 mb-4">
                   <div
                     className="relative cursor-pointer group w-14 h-14"
-                    onClick={() => setSelectedImage(review.imageReviewer)}
+                    onClick={() => setSelectedReview(review)}
                   >
                     <img
                       src={review.imageReviewer}
@@ -129,13 +126,11 @@ const Reviews = () => {
                 {review.imageReview && (
                   <div className="mt-4 flex justify-center">
                     <img
-                      src={review?.imageReview || userIcon}
+                      src={review.imageReview}
                       alt="User Review"
                       className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto rounded-lg object-cover cursor-pointer"
                       onClick={() => {
-                        setSelectedImage(review.imageReview || userIcon);
                         setSelectedReview(review);
-                        setIsBlured(true);
                       }}
                     />
                   </div>
@@ -145,77 +140,10 @@ const Reviews = () => {
           ))}
         </Swiper>
 
-        {/* Блюр для всієї сторінки */}
-        {isBlured && (
-          <div
-            className="fixed inset-0 bg-gray-500 bg-opacity-50 backdrop-blur-sm z-10"
-            onClick={() => setIsBlured(false)}
-          ></div>
-        )}
-
-        {/* Модальне вікно для перегляду фото */}
-        <AnimatePresence>
-          {selectedImage && (
-            <motion.div
-              initial={{ y: "100%", opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: "100%", opacity: 0 }}
-              transition={{ type: "spring", stiffness: 100, damping: 15 }}
-              className="fixed inset-0 z-20 flex items-center justify-center p-4 w-full h-auto min-h-[60vh] rounded-t-3xl"
-              onClick={() => setSelectedImage(null)}
-            >
-              <motion.div
-                initial={{ scale: 0.95, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.95, opacity: 0 }}
-                className="relative max-w-4xl w-full bg-white p-5 rounded-xl shadow-lg"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button
-                  onClick={() => {
-                    setSelectedImage(null);
-                    setIsBlured(false);
-                  }}
-                  className="absolute -top-10 right-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20 mb-2"
-                  aria-label={String(t("reviews.close"))}
-                >
-                  <XMarkIcon className="h-6 w-6 text-amber-900 hover:text-amber-700 " />
-                </button>
-
-                {/* Інформація про відгук */}
-                <div className="text-center mb-4">
-                  <div className="flex justify-center mb-4">
-                    <img
-                      src={selectedReview?.imageReviewer}
-                      alt={selectedReview?.name}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-amber-300"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-amber-900">
-                    {selectedReview?.name}
-                  </h3>
-                  <div className="flex justify-center text-amber-500 mb-2">
-                    {[...Array(selectedReview?.rating || 0)].map((_, i) => (
-                      <span key={i}>★</span>
-                    ))}
-                  </div>
-                  <p className="text-amber-800 text-sm leading-relaxed">
-                    {selectedReview?.text}
-                  </p>
-                </div>
-                {selectedImage && (
-                  <div className="flex justify-center">
-                    <img
-                      src={selectedImage}
-                      alt={String(t("reviews.photo"))}
-                      className="w-full max-w-md h-auto rounded-lg shadow-2xl"
-                    />
-                  </div>
-                )}
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <ImageModal
+          review={selectedReview}
+          onClose={() => setSelectedReview(null)}
+        />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -261,4 +189,70 @@ const Reviews = () => {
     </section>
   );
 };
+interface ImageModalProps {
+  review: Review | null;
+  onClose: () => void;
+}
+
+const ImageModal: React.FC<ImageModalProps> = ({ review, onClose }) => {
+  return (
+    <AnimatePresence>
+      {review && (
+        <motion.div
+          initial={{ y: "100%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: "100%", opacity: 0 }}
+          transition={{ type: "spring", stiffness: 100, damping: 15 }}
+          className="fixed inset-0 z-20 flex items-center justify-center p-4 bg-gray-500 bg-opacity-50 backdrop-blur-sm"
+          onClick={onClose}
+        >
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.95, opacity: 0 }}
+            className="relative max-w-4xl w-full bg-white p-5 rounded-xl shadow-lg"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={onClose}
+              className="absolute -top-10 right-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20 mb-2"
+              aria-label={"Close"}
+            >
+              <XMarkIcon className="h-6 w-6 text-amber-900 hover:text-amber-700 " />
+            </button>
+
+            <div className="text-center mb-4">
+              <div className="flex justify-center mb-4">
+                <img
+                  src={review.imageReviewer}
+                  alt={review.name}
+                  className="w-16 h-16 rounded-full object-cover border-2 border-amber-300"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-amber-900">
+                {review.name}
+              </h3>
+              <div className="flex justify-center text-amber-500 mb-2">
+                {[...Array(review.rating)].map((_, i) => (
+                  <span key={i}>★</span>
+                ))}
+              </div>
+              <p className="text-amber-800 text-sm leading-relaxed">
+                {review.text}
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img
+                src={review.imageReview}
+                alt={"User Review"}
+                className="w-full max-w-md h-auto rounded-lg shadow-2xl"
+              />
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
 export default Reviews;
