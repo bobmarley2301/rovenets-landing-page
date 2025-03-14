@@ -189,9 +189,7 @@ const Products = () => {
                       onClick={(e) => {
                         e.stopPropagation();
                         window.open(
-                          `https://wa.me/YOUR_PHONE_NUMBER?text=${t("order")} ${
-                            product.name
-                          }`,
+                          `https://wa.me/YOUR_PHONE_NUMBER?text=${encodeURIComponent(t("order") + " " + product.name)}`,
                           "_blank"
                         );
                       }}
@@ -209,88 +207,90 @@ const Products = () => {
         {/* Модальне вікно */}
         <AnimatePresence>
           {selectedProduct && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/50"
-              onClick={() => setSelectedProduct(null)}
-            >
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button
-                  onClick={() => setSelectedProduct(null)}
-                  className="absolute -top-3 -left-2 sm:top-1 sm:left-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20"
-                  aria-label="Закрити"
-                >
-                  <XMarkIcon className="h-8 w-8 text-amber-900 hover:text-amber-700 m-2" />
-                </button>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 p-4 sm:p-6">
-                  {/* Галерея зображень */}
-                  <div className="relative">
-                    <Swiper
-                      modules={[Navigation, Pagination]}
-                      spaceBetween={20}
-                      slidesPerView={1}
-                      navigation
-                      pagination={{ clickable: true }}
-                      className="rounded-lg overflow-hidden"
-                    >
-                      {selectedProduct.images.map(
-                        (image: string, index: number) => (
-                          <SwiperSlide key={index}>
-                            <img
-                              src={image}
-                              alt={`${selectedProduct.name} - фото ${
-                                index + 1
-                              }`}
-                              className="w-full h-[300px] sm:h-[400px] object-cover"
-                            />
-                          </SwiperSlide>
-                        )
-                      )}
-                    </Swiper>
-                  </div>
-
-                  {/* Інформація про товар */}
-                  <div className="space-y-6">
-                    <h2 className="text-3xl font-semibold text-amber-900">
-                      {selectedProduct.name}
-                    </h2>
-                    <p className="text-lg text-amber-800">
-                      {selectedProduct.details}
-                    </p>
-                    <p className="text-xl font-semibold text-amber-900">
-                      {selectedProduct.price}
-                    </p>
-                    <button
-                      onClick={() =>
-                        window.open(
-                          `https://wa.me/YOUR_PHONE_NUMBER?text=${t("order")} ${
-                            selectedProduct.name
-                          }`,
-                          "_blank"
-                        )
-                      }
-                      className="bg-amber-900 text-white px-6 py-2 rounded-full hover:bg-amber-800 transition-colors"
-                    >
-                      {t("order")}
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
+            <ProductModal
+              product={selectedProduct}
+              onClose={() => setSelectedProduct(null)}
+            />
           )}
         </AnimatePresence>
       </div>
     </section>
   );
 };
+
+interface ProductModalProps {
+  product: Product;
+  onClose: () => void;
+}
+
+const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/50"
+    onClick={onClose}
+  >
+    <motion.div
+      initial={{ scale: 0.9, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      exit={{ scale: 0.9, opacity: 0 }}
+      className="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        onClick={onClose}
+        className="absolute -top-3 -left-2 sm:top-1 sm:left-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20"
+        aria-label="Close"
+      >
+        <XMarkIcon className="h-8 w-8 text-amber-900 hover:text-amber-700 m-2" />
+      </button>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 p-4 sm:p-6">
+        <div className="relative">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            className="rounded-lg overflow-hidden"
+          >
+            {product.images.map((image: string, index: number) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={image}
+                  alt={`${product.name} - photo ${index + 1}`}
+                  className="w-full h-[300px] sm:h-[400px] object-cover"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        <div className="space-y-6">
+          <h2 className="text-3xl font-semibold text-amber-900">
+            {product.name}
+          </h2>
+          <p className="text-lg text-amber-800">{product.details}</p>
+          <p className="text-xl font-semibold text-amber-900">
+            {product.price}
+          </p>
+          <button
+            onClick={() =>
+              window.open(
+                `https://wa.me/YOUR_PHONE_NUMBER?text=${encodeURIComponent(t("order") + " " + product.name)}`,
+                "_blank"
+              )
+            }
+            className="bg-amber-900 text-white px-6 py-2 rounded-full hover:bg-amber-800 transition-colors"
+          >
+            {t("order")}
+          </button>
+        </div>
+      </div>
+    </motion.div>
+  </motion.div>
+);
 
 export default Products;
