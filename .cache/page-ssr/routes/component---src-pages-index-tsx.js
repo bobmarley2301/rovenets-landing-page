@@ -38018,14 +38018,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/PhoneIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/EnvelopeIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/MapPinIcon.js");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby-plugin-react-i18next */ "./node_modules/gatsby-plugin-react-i18next/index.js");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/PhoneIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/EnvelopeIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/MapPinIcon.js");
+
 
 
 
 const Contact = () => {
+  const {
+    t
+  } = (0,gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__.useTranslation)();
   const {
     0: formData,
     1: setFormData
@@ -38054,7 +38060,7 @@ const Contact = () => {
     className: "py-20 bg-amber-50"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "container mx-auto px-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -38072,11 +38078,11 @@ const Contact = () => {
     className: "text-center mb-12"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "text-3xl md:text-4xl font-playfair mb-6 text-amber-900"
-  }, "\u0417\u0432'\u044F\u0436\u0456\u0442\u044C\u0441\u044F \u0437 \u043D\u0430\u043C\u0438"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, t("contact.title", "Зв'яжіться з нами")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-amber-800 text-lg"
-  }, "\u041C\u0430\u0454\u0442\u0435 \u043F\u0438\u0442\u0430\u043D\u043D\u044F? \u041C\u0438 \u0437\u0430\u0432\u0436\u0434\u0438 \u043D\u0430 \u0437\u0432'\u044F\u0437\u043A\u0443")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("contact.subtitle", "Маєте питання? Ми завжди на зв'язку"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "grid grid-cols-1 md:grid-cols-2 gap-12"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
     initial: {
       opacity: 0,
       x: -20
@@ -38094,35 +38100,35 @@ const Contact = () => {
     className: "bg-white p-8 rounded-lg shadow-lg border border-amber-100"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
     className: "text-2xl font-semibold mb-6 text-amber-900"
-  }, "\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u043D\u0430 \u0456\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0456\u044F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("contact.info.title", "Контактна інформація")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "space-y-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "flex items-start"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    className: "h-6 w-6 text-amber-600 mt-1 mr-4"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", {
-    className: "font-semibold text-amber-900 mb-1"
-  }, "\u0422\u0435\u043B\u0435\u0444\u043E\u043D"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "tel:+380991234567",
-    className: "text-amber-800 hover:text-amber-900"
-  }, "+38 (099) 123-45-67"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex items-start"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "h-6 w-6 text-amber-600 mt-1 mr-4"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", {
     className: "font-semibold text-amber-900 mb-1"
-  }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "mailto:info@rovenets.com",
+  }, t("contact.info.phone.label", "Телефон")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: `tel:${t("contact.info.phone.value", "+380991234567")}`,
     className: "text-amber-800 hover:text-amber-900"
-  }, "info@rovenets.com"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("contact.info.phone.display", "+38 (099) 123-45-67")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex items-start"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "h-6 w-6 text-amber-600 mt-1 mr-4"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", {
     className: "font-semibold text-amber-900 mb-1"
-  }, "\u0410\u0434\u0440\u0435\u0441\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, t("contact.info.email.label", "Email")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: `mailto:${t("contact.info.email.value", "info@rovenets.com")}`,
+    className: "text-amber-800 hover:text-amber-900"
+  }, t("contact.info.email.display", "info@rovenets.com")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "flex items-start"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    className: "h-6 w-6 text-amber-600 mt-1 mr-4"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h4", {
+    className: "font-semibold text-amber-900 mb-1"
+  }, t("contact.info.address.label", "Адреса")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-amber-800"
-  }, "\u043C. \u041A\u0438\u0457\u0432, \u0432\u0443\u043B. \u041F\u0440\u0438\u043A\u043B\u0430\u0434\u043D\u0430, 1"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
+  }, t("contact.info.address.value", "м. Київ, вул. Прикладна, 1")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
     initial: {
       opacity: 0,
       x: 20
@@ -38140,46 +38146,49 @@ const Contact = () => {
     className: "bg-white p-8 rounded-lg shadow-lg border border-amber-100"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
     className: "text-2xl font-semibold mb-6 text-amber-900"
-  }, "\u041D\u0430\u043F\u0438\u0448\u0456\u0442\u044C \u043D\u0430\u043C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
+  }, t("contact.form.title", "Напишіть нам")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
     onSubmit: handleSubmit,
     className: "space-y-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
     htmlFor: "name",
     className: "block text-sm font-medium text-amber-900 mb-1"
-  }, "\u0412\u0430\u0448\u0435 \u0456\u043C'\u044F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  }, t("contact.form.name.label", "Ваше ім'я")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     type: "text",
     id: "name",
     name: "name",
     value: formData.name,
     onChange: handleChange,
     className: "w-full px-4 py-2 border border-amber-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent",
+    placeholder: t("contact.form.name.placeholder", ""),
     required: true
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
     htmlFor: "email",
     className: "block text-sm font-medium text-amber-900 mb-1"
-  }, "Email"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  }, t("contact.form.email.label", "Email")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     type: "email",
     id: "email",
     name: "email",
     value: formData.email,
     onChange: handleChange,
     className: "w-full px-4 py-2 border border-amber-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent",
+    placeholder: t("contact.form.email.placeholder", ""),
     required: true
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
     htmlFor: "message",
     className: "block text-sm font-medium text-amber-900 mb-1"
-  }, "\u041F\u043E\u0432\u0456\u0434\u043E\u043C\u043B\u0435\u043D\u043D\u044F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("textarea", {
+  }, t("contact.form.message.label", "Повідомлення")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("textarea", {
     id: "message",
     name: "message",
     value: formData.message,
     onChange: handleChange,
     rows: 4,
     className: "w-full px-4 py-2 border border-amber-200 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent",
+    placeholder: t("contact.form.message.placeholder", ""),
     required: true
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     type: "submit",
     className: "w-full bg-amber-900 text-white px-6 py-3 rounded-lg hover:bg-amber-800 transition-colors"
-  }, "\u041D\u0430\u0434\u0456\u0441\u043B\u0430\u0442\u0438"))))));
+  }, t("contact.form.submit", "Надіслати")))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Contact);
 
@@ -38198,16 +38207,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/PhoneIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/EnvelopeIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/MapPinIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/PhotoIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/UserGroupIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ChatBubbleLeftRightIcon.js");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby-plugin-react-i18next */ "./node_modules/gatsby-plugin-react-i18next/index.js");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/PhoneIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/EnvelopeIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/MapPinIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/PhotoIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/UserGroupIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ChatBubbleLeftRightIcon.js");
+
 
 
 
 const Footer = () => {
+  const {
+    t
+  } = (0,gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__.useTranslation)();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", {
     className: "bg-amber-900 text-white"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -38216,58 +38231,61 @@ const Footer = () => {
     className: "grid grid-cols-1 md:grid-cols-3 gap-8"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
     className: "text-xl font-semibold mb-4 text-amber-100"
-  }, "\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u0438"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("footer.contacts", "Контакти")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "space-y-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "flex items-center text-amber-100"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    className: "h-5 w-5 mr-2"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "tel:+380991234567",
-    className: "hover:text-amber-200"
-  }, "+38 (099) 123-45-67")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "flex items-center text-amber-100"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__["default"], {
     className: "h-5 w-5 mr-2"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "mailto:info@rovenets.com",
+    href: `tel:${t("contact.info.phone.value", "+380991234567")}`,
     className: "hover:text-amber-200"
-  }, "info@rovenets.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, t("contact.info.phone.display", "+38 (099) 123-45-67"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "flex items-center text-amber-100"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__["default"], {
     className: "h-5 w-5 mr-2"
-  }), "\u043C. \u041A\u0438\u0457\u0432, \u0432\u0443\u043B. \u041F\u0440\u0438\u043A\u043B\u0430\u0434\u043D\u0430, 1"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: `mailto:${t("contact.info.email.value", "info@rovenets.com")}`,
+    className: "hover:text-amber-200"
+  }, t("contact.info.email.display", "info@rovenets.com"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "flex items-center text-amber-100"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: "h-5 w-5 mr-2"
+  }), t("contact.info.address.value", "м. Київ, вул. Прикладна, 1")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
     className: "text-xl font-semibold mb-4 text-amber-100"
-  }, "\u0421\u043E\u0446\u0456\u0430\u043B\u044C\u043D\u0456 \u043C\u0435\u0440\u0435\u0436\u0456"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("footer.socialTitle", "Соціальні мережі")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex space-x-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "https://instagram.com",
     target: "_blank",
     rel: "noopener noreferrer",
-    className: "text-amber-100 hover:text-amber-200"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    className: "text-amber-100 hover:text-amber-200",
+    "aria-label": t("footer.social.instagram", "Instagram")
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
     className: "h-6 w-6"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "https://facebook.com",
     target: "_blank",
     rel: "noopener noreferrer",
-    className: "text-amber-100 hover:text-amber-200"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    className: "text-amber-100 hover:text-amber-200",
+    "aria-label": t("footer.social.facebook", "Facebook")
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
     className: "h-6 w-6"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "https://telegram.org",
     target: "_blank",
     rel: "noopener noreferrer",
-    className: "text-amber-100 hover:text-amber-200"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    className: "text-amber-100 hover:text-amber-200",
+    "aria-label": t("footer.social.telegram", "Telegram")
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
     className: "h-6 w-6"
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
     className: "text-xl font-semibold mb-4 text-amber-100"
-  }, "\u0420\u043E\u0431\u043E\u0447\u0438\u0439 \u0447\u0430\u0441"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("footer.workingHours.title", "Робочий час")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "space-y-2 text-amber-100"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\u041F\u043D-\u041F\u0442: 10:00 - 19:00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\u0421\u0431: 11:00 - 17:00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\u041D\u0434: \u0412\u0438\u0445\u0456\u0434\u043D\u0438\u0439")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, t("footer.workingHours.weekdays", "Пн-Пт: 10:00 - 19:00")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, t("footer.workingHours.saturday", "Сб: 11:00 - 17:00")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, t("footer.workingHours.sunday", "Нд: Вихідний"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "border-t border-amber-800 mt-8 pt-8 text-center text-amber-100"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA9 ", new Date().getFullYear(), " Rovenets. \u0412\u0441\u0456 \u043F\u0440\u0430\u0432\u0430 \u0437\u0430\u0445\u0438\u0449\u0435\u043D\u043E."))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA9 ", new Date().getFullYear(), " Rovenets.", " ", t("footer.copyright", "Всі права захищено.")))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
 
@@ -38486,13 +38504,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs");
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var _constants_routes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../constants/routes */ "./src/constants/routes.ts");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/XMarkIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/Bars3Icon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/XMarkIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/Bars3Icon.js");
 /* harmony import */ var _LanguageSwitcher__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./LanguageSwitcher */ "./src/components/LanguageSwitcher.tsx");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gatsby-plugin-react-i18next */ "./node_modules/gatsby-plugin-react-i18next/index.js");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -38500,6 +38521,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Navbar = () => {
+  const {
+    t
+  } = (0,gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_4__.useTranslation)();
   const {
     0: isOpen,
     1: setIsOpen
@@ -38560,7 +38584,35 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.nav, {
+
+  // Функція для отримання перекладу для навігаційних елементів
+  const getTranslatedName = itemId => {
+    return t(`navigation.${itemId}`, getDefaultName(itemId));
+  };
+
+  // Функція для отримання запасного імені, якщо переклад відсутній
+  const getDefaultName = itemId => {
+    // Використовуйте типово безпечний запис з явним переліком всіх можливих значень SectionId
+    switch (itemId) {
+      case "home":
+        return "Головна";
+      case "about":
+        return "Про нас";
+      case "products":
+        return "Продукція";
+      case "whyChooseUs":
+        return "Чому ми";
+      case "orderShipping":
+        return "Замовлення";
+      case "contact":
+        return "Контакти";
+      case "reviews":
+        return "Відгуки";
+      default:
+        return itemId;
+    }
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_5__.motion.nav, {
     initial: {
       y: -100
     },
@@ -38584,14 +38636,15 @@ const Navbar = () => {
     key: item.id,
     onClick: () => scrollToSection(item.id),
     className: `text-lg transition-colors ${activeSection === item.id ? "text-amber-900 font-medium" : "text-amber-700 hover:text-amber-900"}`
-  }, item.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_LanguageSwitcher__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+  }, getTranslatedName(item.id))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_LanguageSwitcher__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     onClick: toggleMenu,
-    className: "md:hidden text-amber-900"
-  }, isOpen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    className: "md:hidden text-amber-900",
+    "aria-label": isOpen ? t("navigation.close", "Закрити меню") : t("navigation.open", "Відкрити меню")
+  }, isOpen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
     className: "h-6 w-6"
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"], {
     className: "h-6 w-6"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_7__.AnimatePresence, null, isOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.div, {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.AnimatePresence, null, isOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_5__.motion.div, {
     initial: {
       opacity: 0,
       height: 0
@@ -38614,7 +38667,9 @@ const Navbar = () => {
       setIsOpen(false);
     },
     className: `block w-full text-left px-4 py-2 text-lg transition-colors ${activeSection === item.id ? "text-amber-900 font-medium" : "text-amber-700 hover:text-amber-900"}`
-  }, item.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_LanguageSwitcher__WEBPACK_IMPORTED_MODULE_3__["default"], null))))));
+  }, getTranslatedName(item.id))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "px-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_LanguageSwitcher__WEBPACK_IMPORTED_MODULE_3__["default"], null)))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navbar);
 
@@ -38633,10 +38688,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby-plugin-react-i18next */ "./node_modules/gatsby-plugin-react-i18next/index.js");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__);
 
 
-const steps = [{
+
+
+// Запасні дані, які будуть використовуватися при відсутності перекладів
+const fallbackSteps = [{
   number: "01",
   title: "Оберіть модель",
   description: "Перегляньте наш каталог та виберіть модель, яка вам подобається"
@@ -38649,13 +38709,41 @@ const steps = [{
   title: "Отримайте замовлення",
   description: "Ми доставимо ваше замовлення в будь-яку точку світу"
 }];
+const fallbackShippingItems = ["Доставка по всій Україні - 2-3 дні", "Міжнародна доставка - 5-10 днів", "Відстеження замовлення", "Безпечна упаковка"];
+const fallbackProductionItems = ["Виготовлення виробу - 3-5 робочих днів", "Відправка замовлення - протягом 1-2 днів", "Можливість термінового виконання", "Регулярні оновлення статусу замовлення"];
 const OrderShipping = () => {
+  const {
+    t
+  } = (0,gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__.useTranslation)();
+
+  // Отримуємо переклади кроків з JSON-файлу з перевіркою
+  const steps = t("orderShipping.steps", {
+    returnObjects: true
+  }) || fallbackSteps;
+
+  // Отримуємо переклади для доставки з перевіркою
+  const shippingItems = t("orderShipping.shipping.items", {
+    returnObjects: true
+  }) || fallbackShippingItems;
+
+  // Отримуємо переклади для періоду виготовлення з перевіркою
+  const productionItems = t("orderShipping.production.items", {
+    returnObjects: true
+  }) || fallbackProductionItems;
+
+  // Перевірка, чи є отримані дані масивами
+  const validSteps = Array.isArray(steps) ? steps : fallbackSteps;
+  const validShippingItems = Array.isArray(shippingItems) ? shippingItems : fallbackShippingItems;
+  const validProductionItems = Array.isArray(productionItems) ? productionItems : fallbackProductionItems;
+  console.log("Steps:", steps); // Додаємо логування для діагностики
+  console.log("Shipping items:", shippingItems);
+  console.log("Production items:", productionItems);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     id: "order-shipping",
     className: "py-24 bg-amber-50"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "container mx-auto px-6"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -38673,12 +38761,12 @@ const OrderShipping = () => {
     className: "text-center mb-16"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "text-4xl md:text-5xl font-playfair mb-6 text-amber-900"
-  }, "\u0417\u0430\u043C\u043E\u0432\u043B\u0435\u043D\u043D\u044F \u0442\u0430 \u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, t("orderShipping.title", "Замовлення та доставка")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-amber-800 text-lg"
-  }, "\u041F\u0440\u043E\u0441\u0442\u0438\u0439 \u043F\u0440\u043E\u0446\u0435\u0441 \u0437\u0430\u043C\u043E\u0432\u043B\u0435\u043D\u043D\u044F \u0442\u0430 \u0448\u0432\u0438\u0434\u043A\u0430 \u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0430")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("orderShipping.subtitle", "Простий процес замовлення та швидка доставка"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
-  }, steps.map((step, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
-    key: step.number,
+  }, validSteps.map((step, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
+    key: step.number || index,
     initial: {
       opacity: 0,
       y: 20
@@ -38705,7 +38793,7 @@ const OrderShipping = () => {
     className: "text-amber-800 text-lg"
   }, step.description))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "grid grid-cols-1 md:grid-cols-2 gap-8"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
     initial: {
       opacity: 0,
       x: -20
@@ -38723,9 +38811,11 @@ const OrderShipping = () => {
     className: "bg-amber-100/50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
     className: "text-2xl font-semibold mb-6 text-amber-900"
-  }, "\u0414\u043E\u0441\u0442\u0430\u0432\u043A\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+  }, t("orderShipping.shipping.title", "Доставка")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: "space-y-3 text-amber-800 text-lg"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "\u2022 \u0414\u043E\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u043E \u0432\u0441\u0456\u0439 \u0423\u043A\u0440\u0430\u0457\u043D\u0456 - 2-3 \u0434\u043D\u0456"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "\u2022 \u041C\u0456\u0436\u043D\u0430\u0440\u043E\u0434\u043D\u0430 \u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0430 - 5-10 \u0434\u043D\u0456\u0432"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "\u2022 \u0412\u0456\u0434\u0441\u0442\u0435\u0436\u0435\u043D\u043D\u044F \u0437\u0430\u043C\u043E\u0432\u043B\u0435\u043D\u043D\u044F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "\u2022 \u0411\u0435\u0437\u043F\u0435\u0447\u043D\u0430 \u0443\u043F\u0430\u043A\u043E\u0432\u043A\u0430"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
+  }, validShippingItems.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    key: index
+  }, "\u2022 ", item)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
     initial: {
       opacity: 0,
       x: 20
@@ -38743,9 +38833,11 @@ const OrderShipping = () => {
     className: "bg-amber-100/50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
     className: "text-2xl font-semibold mb-6 text-amber-900"
-  }, "\u041F\u043E\u043B\u0456\u0442\u0438\u043A\u0430 \u043F\u043E\u0432\u0435\u0440\u043D\u0435\u043D\u043D\u044F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+  }, t("orderShipping.production.title", "Період виготовлення та відправки")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: "space-y-3 text-amber-800 text-lg"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "\u2022 \u041F\u043E\u0432\u0435\u0440\u043D\u0435\u043D\u043D\u044F \u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C 14 \u0434\u043D\u0456\u0432"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "\u2022 \u0411\u0435\u0437\u043A\u043E\u0448\u0442\u043E\u0432\u043D\u0430 \u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0430 \u043F\u0440\u0438 \u043F\u043E\u0432\u0435\u0440\u043D\u0435\u043D\u043D\u0456"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "\u2022 \u041F\u043E\u0432\u043D\u0438\u0439 \u043F\u043E\u0432\u043E\u0440\u043E\u0442 \u043A\u043E\u0448\u0442\u0456\u0432"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "\u2022 \u0417\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u043D\u044F \u043E\u0440\u0438\u0433\u0456\u043D\u0430\u043B\u044C\u043D\u043E\u0457 \u0443\u043F\u0430\u043A\u043E\u0432\u043A\u0438")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
+  }, validProductionItems.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    key: index
+  }, "\u2022 ", item))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -38767,7 +38859,7 @@ const OrderShipping = () => {
     target: "_blank",
     rel: "noopener noreferrer",
     className: "inline-block bg-amber-900 text-white px-8 py-3 rounded-full hover:bg-amber-800 transition-colors"
-  }, "\u0417\u0430\u043C\u043E\u0432\u0438\u0442\u0438 \u0437\u0430\u0440\u0430\u0437"))));
+  }, t("orderShipping.orderNow", "Замовити зараз")))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OrderShipping);
 
@@ -39102,32 +39194,34 @@ const Reviews = () => {
     0: selectedReview,
     1: setSelectedReview
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+
+  // Формуємо відгуки з перекладів
   const reviews = [{
     id: 1,
-    name: t("reviews.name1"),
+    name: t("reviews.0.name1"),
     imageReviewer: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
-    text: t("reviews.text1"),
+    text: t("reviews.0.text1"),
     rating: 5,
     imageReview: "https://placehold.co/500x400"
   }, {
     id: 2,
-    name: t("reviews.name2"),
+    name: t("reviews.1.name2"),
     imageReviewer: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop",
-    text: t("reviews.text2"),
+    text: t("reviews.1.text2"),
     rating: 5,
     imageReview: "https://placehold.co/500x400"
   }, {
     id: 3,
-    name: t("reviews.name3"),
+    name: t("reviews.2.name3"),
     imageReviewer: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop",
-    text: t("reviews.text3"),
+    text: t("reviews.2.text3"),
     rating: 5,
     imageReview: "https://placehold.co/500x400"
   }, {
     id: 4,
-    name: t("reviews.name4"),
+    name: t("reviews.3.name4"),
     imageReviewer: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop",
-    text: t("reviews.text4"),
+    text: t("reviews.3.text4"),
     rating: 5,
     imageReview: "https://placehold.co/500x400"
   }];
@@ -39154,9 +39248,9 @@ const Reviews = () => {
     className: "text-center mb-12"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "text-3xl md:text-4xl font-playfair mb-6 text-amber-900"
-  }, t("reviewsTitle"), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, t("reviews.title")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-amber-800 text-lg"
-  }, t("reviewsSubtitle"), " ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_1__.Swiper, {
+  }, t("reviews.subtitle"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(swiper_react__WEBPACK_IMPORTED_MODULE_1__.Swiper, {
     modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper_modules__WEBPACK_IMPORTED_MODULE_2__.Pagination],
     spaceBetween: 20,
     slidesPerView: 1,
@@ -39263,7 +39357,7 @@ const Reviews = () => {
       setIsBlured(false);
     },
     className: "absolute -top-10 right-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20 mb-2",
-    "aria-label": "\u0417\u0430\u043A\u0440\u0438\u0442\u0438"
+    "aria-label": String(t("reviews.close"))
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_10__["default"], {
     className: "h-6 w-6 text-amber-900 hover:text-amber-700 "
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -39286,7 +39380,7 @@ const Reviews = () => {
     className: "flex justify-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: selectedImage,
-    alt: "\u0424\u043E\u0442\u043E \u043A\u043B\u0456\u0454\u043D\u0442\u0430",
+    alt: String(t("reviews.photo")),
     className: "w-full max-w-md h-auto rounded-lg shadow-2xl"
   }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.motion.div, {
     initial: {
@@ -39320,7 +39414,7 @@ const Reviews = () => {
       repeat: Infinity
     },
     className: "mr-2 underline"
-  }, "\u0411\u0456\u043B\u044C\u0448\u0435 \u0432\u0456\u0434\u0433\u0443\u043A\u0456\u0432 \u043D\u0430 Instagram"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.motion.svg, {
+  }, t("reviews.more_on_instagram")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_8__.motion.svg, {
     animate: {
       y: [0, -10, 0]
     },
@@ -39353,33 +39447,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby-plugin-react-i18next */ "./node_modules/gatsby-plugin-react-i18next/index.js");
+/* harmony import */ var gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__);
 
 
-const advantages = [{
-  icon: "🌿",
-  title: "Екологічні матеріали",
-  description: "Ми використовуємо тільки якісні, екологічно чисті матеріали для наших виробів"
-}, {
-  icon: "✋",
-  title: "100% Handmade",
-  description: "Кожен виріб створюється вручну з особливою увагою до деталей"
-}, {
-  icon: "🛫",
-  title: "Доставка по всьому світу",
-  description: "Швидка та надійна доставка в будь-яку точку світу"
-}, {
-  icon: "🎁",
-  title: "Індивідуальні замовлення",
-  description: "Створюємо унікальні вироби згідно з вашими побажаннями"
-}];
+
 const WhyChooseUs = () => {
+  const {
+    t
+  } = (0,gatsby_plugin_react_i18next__WEBPACK_IMPORTED_MODULE_1__.useTranslation)();
+
+  // Отримуємо переклади переваг з JSON-файлу
+  const advantages = t("whyChooseUs.advantages", {
+    returnObjects: true
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     id: "why-choose-us",
     className: "py-24 bg-amber-50"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "container mx-auto px-6"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -39397,11 +39485,11 @@ const WhyChooseUs = () => {
     className: "text-center mb-16"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "text-4xl md:text-5xl font-playfair mb-6 text-amber-900"
-  }, "\u0427\u043E\u043C\u0443 \u043E\u0431\u0438\u0440\u0430\u044E\u0442\u044C \u043D\u0430\u0441?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, t("whyChooseUs.title")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-amber-800 text-lg"
-  }, "\u041D\u0430\u0448\u0456 \u043F\u0435\u0440\u0435\u0432\u0430\u0433\u0438, \u044F\u043A\u0456 \u0440\u043E\u0431\u043B\u044F\u0442\u044C \u043D\u0430\u0441 \u0443\u043D\u0456\u043A\u0430\u043B\u044C\u043D\u0438\u043C\u0438")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, t("whyChooseUs.subtitle"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-  }, advantages.map((advantage, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
+  }, advantages.map((advantage, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
     key: advantage.title,
     initial: {
       opacity: 0,
@@ -39425,7 +39513,7 @@ const WhyChooseUs = () => {
     className: "text-2xl font-semibold mb-4 text-amber-900"
   }, advantage.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "text-amber-800 text-lg"
-  }, advantage.description)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_1__.motion.div, {
+  }, advantage.description)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(framer_motion__WEBPACK_IMPORTED_MODULE_2__.motion.div, {
     initial: {
       opacity: 0,
       y: 20
@@ -39445,7 +39533,7 @@ const WhyChooseUs = () => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#contact",
     className: "inline-block bg-amber-900 text-white px-8 py-3 rounded-full hover:bg-amber-800 transition-colors"
-  }, "\u0417\u0432'\u044F\u0437\u0430\u0442\u0438\u0441\u044F \u0437 \u043D\u0430\u043C\u0438"))));
+  }, t("whyChooseUs.contactButton")))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WhyChooseUs);
 
@@ -39505,26 +39593,30 @@ const SECTIONS = {
   ABOUT: "about",
   CONTACTS: "contact",
   REVIEWS: "reviews",
-  ORDER: "order-shipping"
+  ORDER: "orderShipping",
+  WHY_CHOOSE_US: "whyChooseUs" // Змінено з "why-us" на "whyChooseUs"
 };
 const NAV_ITEMS = [{
-  name: "Головна",
-  id: SECTIONS.HOME
+  id: "home",
+  name: "Home"
 }, {
-  name: "Про нас",
-  id: SECTIONS.ABOUT
+  id: "about",
+  name: "About"
 }, {
-  name: "Каталог",
-  id: SECTIONS.CATALOG
+  id: "products",
+  name: "Products"
 }, {
-  name: "Відгуки",
-  id: SECTIONS.REVIEWS
+  id: "reviews",
+  name: "Reviews"
 }, {
-  name: "Замовити",
-  id: SECTIONS.ORDER
+  id: "whyChooseUs",
+  name: "Why Us"
 }, {
-  name: "Контакти",
-  id: SECTIONS.CONTACTS
+  id: "orderShipping",
+  name: "Ordering"
+}, {
+  id: "contact",
+  name: "Contact"
 }];
 const SCROLL_OFFSET = 80; // Висота навбару
 
@@ -39627,7 +39719,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"hero":{"title":"Rovenets - unique handmade products","subtitle":"Handmade bags and backpacks from natural materials","description":"We create unique products from natural materials, designed with care and passion. Each item is handcrafted to ensure quality and style.","catalogButton":"Browse our catalog","contactButton":"Contact us"},"about":{"title":"About Us","description_1":"We create unique handmade products with love and attention to detail, ensuring top-quality materials are carefully chosen for each bag and backpack.","description_2":"Our mission is to create not just accessories, but unique pieces that become part of your story and an expression of your individuality.","experience":"5+ Years of Experience","clients":"100+ Satisfied Clients","values":{"sustainability":{"title":"Sustainability","description":"Eco-friendly materials and responsible production"},"handmade":{"title":"Handmade","description":"Each product is made by hand with love"},"custom_orders":{"title":"Custom Orders","description":"Custom orders for your unique needs"}}},"products":{"title":"Our Products","subtitle":"Discover unique handmade items","all":"All","women":"Women\'s","children":"Children\'s","order":"Order","modal":{"close":"Close","description":"Description"}},"categories":{"children":"Children","women":"Women\'s","all":"All","mom&child":"Mom & Child"},"product":{"name":"Name","price":"Price","description":"Description","details":"Details","sunflower_bag":{"name":"Sunflower Bag","category":"Women","price":"2500 UAH","description":"A versatile leather backpack","details":"The backpack is made of high-quality genuine leather. It has adjustable straps and internal compartments for organizing your things. Perfect for daily walks and travel."},"mom_child_bear_set":{"name":"Mom and Child Bear Bag Set","price":"1200 UAH","category":"mom&child","description":"A stylish and convenient bag set for moms and kids, decorated with a cute bear.","details":"The set includes two bags: a large one for the mom and a small one for the child. Made of high-quality materials, featuring comfortable straps and multiple compartments."},"romantic_dog_bag":{"name":"Romantic Dog Bag","category":"Children","price":"1800 UAH","description":"An elegant bag for everyday walks","details":"A bag with a cute dog print. Made of durable materials, it has a comfortable handle and an adjustable strap. Ideal for walks and shopping."},"lily_shaped_bag":{"name":"Lily-shaped Bag","category":"Women","price":"2800 UAH","description":"A spacious backpack for travel and hiking","details":"A lily-shaped backpack made of durable materials. It has a waterproof coating and comfortable compartments. Perfect for traveling and active recreation."},"koala_children_backpack":{"name":"Koala Children\'s Backpack","category":"Children","price":"1500 UAH","description":"A compact bag for small items","details":"A backpack with a koala print. Lightweight and comfortable, it has adjustable straps and compartments for organizing your things. Ideal for preschool and early school-age children."}},"reviews":[{"id":1,"name1":"Anna Petrenko","text1":"Excellent quality and attention to detail! My backpack looks simply charming and is very convenient to use."},{"id":2,"name2":"Maksym Kovalenko","text2":"Ordered a custom bag. The result exceeded all my expectations. Highly recommend!"},{"id":3,"name3":"Olena Sydorenko","text3":"Very satisfied with the quality and production speed. The bag turned out just wonderful!"},{"id":4,"name4":"Ivan Melnyk","text4":"Great job! The backpack was made according to all my wishes. Thank you!"}]}');
+module.exports = /*#__PURE__*/JSON.parse('{"navigation":{"home":"Home","about":"About","products":"Products","whyChooseUs":"Why Us","order-shipping":"Ordering","contact":"Contact","open":"Open menu","close":"Close menu"},"hero":{"title":"Rovenets - unique handmade products","subtitle":"Handmade bags and backpacks from natural materials","description":"We create unique products from natural materials, designed with care and passion. Each item is handcrafted to ensure quality and style.","catalogButton":"Browse our catalog","contactButton":"Contact us"},"about":{"title":"About Us","description_1":"We create unique handmade products with love and attention to detail, ensuring top-quality materials are carefully chosen for each bag and backpack.","description_2":"Our mission is to create not just accessories, but unique pieces that become part of your story and an expression of your individuality.","experience":"5+ Years of Experience","clients":"100+ Satisfied Clients","values":{"sustainability":{"title":"Sustainability","description":"Eco-friendly materials and responsible production"},"handmade":{"title":"Handmade","description":"Each product is made by hand with love"},"custom_orders":{"title":"Custom Orders","description":"Custom orders for your unique needs"}}},"products":{"title":"Our Products","subtitle":"Discover unique handmade items","all":"All","women":"Women\'s","children":"Children\'s","order":"Order","modal":{"close":"Close","description":"Description"}},"categories":{"children":"Children","women":"Women\'s","all":"All","mom&child":"Mom & Child"},"product":{"name":"Name","price":"Price","description":"Description","details":"Details","sunflower_bag":{"name":"Sunflower Bag","category":"Women","price":"2500 UAH","description":"A versatile leather backpack","details":"The backpack is made of high-quality genuine leather. It has adjustable straps and internal compartments for organizing your things. Perfect for daily walks and travel."},"mom_child_bear_set":{"name":"Mom and Child Bear Bag Set","price":"1200 UAH","category":"mom&child","description":"A stylish and convenient bag set for moms and kids, decorated with a cute bear.","details":"The set includes two bags: a large one for the mom and a small one for the child. Made of high-quality materials, featuring comfortable straps and multiple compartments."},"romantic_dog_bag":{"name":"Romantic Dog Bag","category":"Children","price":"1800 UAH","description":"An elegant bag for everyday walks","details":"A bag with a cute dog print. Made of durable materials, it has a comfortable handle and an adjustable strap. Ideal for walks and shopping."},"lily_shaped_bag":{"name":"Lily-shaped Bag","category":"Women","price":"2800 UAH","description":"A spacious backpack for travel and hiking","details":"A lily-shaped backpack made of durable materials. It has a waterproof coating and comfortable compartments. Perfect for traveling and active recreation."},"koala_children_backpack":{"name":"Koala Children\'s Backpack","category":"Children","price":"1500 UAH","description":"A compact bag for small items","details":"A backpack with a koala print. Lightweight and comfortable, it has adjustable straps and compartments for organizing your things. Ideal for preschool and early school-age children."}},"reviews":{"0":{"id":1,"name1":"Anna Petrenko","text1":"Excellent quality and attention to detail! My backpack looks simply charming and is very convenient to use."},"1":{"id":2,"name2":"Maksym Kovalenko","text2":"Ordered a custom bag. The result exceeded all my expectations. Highly recommend!"},"2":{"id":3,"name3":"Olena Sydorenko","text3":"Very satisfied with the quality and production speed. The bag turned out just wonderful!"},"3":{"id":4,"name4":"Ivan Melnyk","text4":"Great job! The backpack was made according to all my wishes. Thank you!"},"title":"Customer Reviews","subtitle":"See what our customers are saying about us","close":"Close","photo":"Customer photo","more_on_instagram":"More reviews on Instagram"},"whyChooseUs":{"title":"Why Choose Us?","subtitle":"Our advantages that make us unique","contactButton":"Contact Us","advantages":[{"icon":"🌿","title":"Eco-friendly Materials","description":"We use only high-quality, environmentally friendly materials for our products"},{"icon":"✋","title":"100% Handmade","description":"Each product is handcrafted with special attention to detail"},{"icon":"🛫","title":"Worldwide Delivery","description":"Fast and reliable delivery to any point in the world"},{"icon":"🎁","title":"Custom Orders","description":"We create unique products according to your wishes"}]},"orderShipping":{"title":"Order and Shipping","subtitle":"Simple ordering process and fast delivery","orderNow":"Order Now","steps":[{"number":"01","title":"Choose a Model","description":"Browse our catalog and select a model you like"},{"number":"02","title":"Contact Us","description":"Get in touch with us via WhatsApp or contact form"},{"number":"03","title":"Receive Your Order","description":"We will deliver your order to any location worldwide"}],"shipping":{"title":"Shipping","items":["Delivery across Ukraine - 2-3 days","International shipping - 5-10 days","Order tracking","Secure packaging"]},"production":{"title":"Production and Dispatch Period","items":["Product manufacturing - 3-5 working days","Order dispatch - within 1-2 days","Express order fulfillment available","Regular order status updates"]}},"contact":{"title":"Contact Us","subtitle":"Have questions? We\'re always in touch","info":{"title":"Contact Information","phone":{"label":"Phone","value":"+380991234567","display":"+38 (099) 123-45-67"},"email":{"label":"Email","value":"info@rovenets.com","display":"info@rovenets.com"},"address":{"label":"Address","value":"Kyiv, 1 Prykladna St."}},"form":{"title":"Write to Us","name":{"label":"Your Name","placeholder":"Enter your name"},"email":{"label":"Email","placeholder":"Enter your email"},"message":{"label":"Message","placeholder":"Enter your message"},"submit":"Send"}},"footer":{"contacts":"Contacts","socialTitle":"Social Media","social.instagram":"Instagram","social.facebook":"Facebook","social.telegram":"Telegram","workingHours":{"title":"Working Hours","weekdays":"Mon-Fri: 10:00 AM - 7:00 PM","saturday":"Sat: 11:00 AM - 5:00 PM","sunday":"Sun: Closed"},"copyright":"All rights reserved."}}');
 
 /***/ }),
 
@@ -39638,7 +39730,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"hero":{"title":"Rovenets - unique ha
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"hero":{"title":"Rovenets - унікальні вироби ручної роботи","subtitle":"Ручні сумки та рюкзаки з натуральних матеріалів","description":"Ми створюємо унікальні вироби з натуральних матеріалів, продумані з увагою та пристрастю. Кожен виріб виготовлений вручну для забезпечення якості та стилю.","catalogButton":"Переглянути каталог","contactButton":"Зв\'язатися з нами"},"about":{"title":"Про нас","description_1":"Ми створюємо унікальні вироби ручної роботи з любов\'ю до деталей та увагою до якості. Кожна сумка та рюкзак - це результат творчого підходу та ретельного підбору матеріалів.","description_2":"Наша місія - створювати не просто аксесуари, а унікальні вироби, які стануть частиною вашої історії та виразом вашої індивідуальності.","experience":"5+ Років досвіду","clients":"100+ Задоволених клієнтів","values":{"sustainability":{"title":"Екологічність","description":"Екологічні матеріали та відповідальне виробництво"},"handmade":{"title":"Ручна робота","description":"Кожен виріб зроблений вручну з любов\'ю"},"custom_orders":{"title":"Індивідуальні замовлення","description":"Індивідуальні замовлення для ваших унікальних потреб"}}},"categories":{"children":"Дитячі","women":"Жіночі","all":"Всі","mom&child":"Мама та дитина"},"products":{"title":"Наша продукція","subtitle":"Відкрийте для себе унікальні вироби ручної роботи","all":"Всі","women":"Жіночі","children":"Дітей","order":"Замовити","modal":{"close":"Закрити","description":"Опис"}},"product":{"name":"Назва","price":"Ціна","description":"Опис","details":"Деталі","sunflower_bag":{"name":"Sunflower Bag","category":"Жіночі","price":"2500 грн","description":"Універсальний рюкзак з натуральної шкіри","details":"Рюкзак виготовлений з натуральної шкіри високої якості. Має зручні ремені для регулювання та внутрішні відділення для організації речей. Ідеально підходить для щоденних прогулянок та подорожей."},"mom_child_bear_set":{"name":"Набір сумка для мами та дитини з ведмедиком","category":"Мама та дитина","price":"5200 грн","description":"Стильний та зручний набір сумок для мами та дитини, прикрашений милим ведмедиком.","details":"У набір входять дві сумки: велика для мами та маленька для дитини. Виконані з якісних матеріалів, мають зручні ремінці та багато відділень."},"romantic_dog_bag":{"name":"Романтична Сумка з Собачкою","category":"Дітей","price":"1800 грн","description":"Елегантна сумка для щоденних прогулянок","details":"Сумка з милим принтом собачки. Виготовлена з міцних матеріалів, має зручну ручку та регульований ремінь. Ідеальна для прогулянок та шопінгу."},"lily_shaped_bag":{"name":"Сумка у Формі Лілії","category":"Жіночі","price":"2800 грн","description":"Просторний рюкзак для подорожей та походів","details":"Рюкзак у формі лілії з міцних матеріалів. Має водонепроникне покриття та зручні відділення. Ідеально підходить для подорожей та активного відпочинку."},"koala_children_backpack":{"name":"Дитячий Рюкзак з Коалою","category":"Дітей","price":"1500 грн","description":"Компактна сумка для невеликих речей","details":"Рюкзак з принтом коали. Легкий та зручний, має регульовані ремені та відділення для організації речей. Ідеальний для дітей дошкільного та молодшого шкільного віку."}},"reviews":[{"id":1,"name1":"Анна Петренко","text1":"Чудова якість та увага до деталей! Мій рюкзак виглядає просто чарівно і дуже зручний у використанні."},{"id":2,"name2":"Максим Коваленко","text2":"Замовляв індивідуальну сумку. Результат перевершив всі мої очікування. Рекомендую!"},{"id":3,"name3":"Олена Сидоренко","text3":"Дуже задоволена якістю та швидкістю виготовлення. Сумка вийшла просто чудова!"},{"id":4,"name4":"Іван Мельник","text4":"Відмінна робота! Рюкзак виготовлений з дотриманням всіх моїх побажань. Дякую!"}]}');
+module.exports = /*#__PURE__*/JSON.parse('{"navigation":{"home":"Головна","about":"Про нас","products":"Продукція","whyChooseUs":"Чому ми","order-shipping":"Замовлення","contact":"Контакти","open":"Відкрити меню","close":"Закрити меню"},"hero":{"title":"Rovenets - унікальні вироби ручної роботи","subtitle":"Ручні сумки та рюкзаки з натуральних матеріалів","description":"Ми створюємо унікальні вироби з натуральних матеріалів, продумані з увагою та пристрастю. Кожен виріб виготовлений вручну для забезпечення якості та стилю.","catalogButton":"Переглянути каталог","contactButton":"Зв\'язатися з нами"},"about":{"title":"Про нас","description_1":"Ми створюємо унікальні вироби ручної роботи з любов\'ю до деталей та увагою до якості. Кожна сумка та рюкзак - це результат творчого підходу та ретельного підбору матеріалів.","description_2":"Наша місія - створювати не просто аксесуари, а унікальні вироби, які стануть частиною вашої історії та виразом вашої індивідуальності.","experience":"5+ Років досвіду","clients":"100+ Задоволених клієнтів","values":{"sustainability":{"title":"Екологічність","description":"Екологічні матеріали та відповідальне виробництво"},"handmade":{"title":"Ручна робота","description":"Кожен виріб зроблений вручну з любов\'ю"},"custom_orders":{"title":"Індивідуальні замовлення","description":"Індивідуальні замовлення для ваших унікальних потреб"}}},"categories":{"children":"Дитячі","women":"Жіночі","all":"Всі","mom&child":"Мама та дитина"},"products":{"title":"Наша продукція","subtitle":"Відкрийте для себе унікальні вироби ручної роботи","all":"Всі","women":"Жіночі","children":"Дітей","order":"Замовити","modal":{"close":"Закрити","description":"Опис"}},"product":{"name":"Назва","price":"Ціна","description":"Опис","details":"Деталі","sunflower_bag":{"name":"Sunflower Bag","category":"Жіночі","price":"2500 грн","description":"Універсальний рюкзак з натуральної шкіри","details":"Рюкзак виготовлений з натуральної шкіри високої якості. Має зручні ремені для регулювання та внутрішні відділення для організації речей. Ідеально підходить для щоденних прогулянок та подорожей."},"mom_child_bear_set":{"name":"Набір сумка для мами та дитини з ведмедиком","category":"Мама та дитина","price":"5200 грн","description":"Стильний та зручний набір сумок для мами та дитини, прикрашений милим ведмедиком.","details":"У набір входять дві сумки: велика для мами та маленька для дитини. Виконані з якісних матеріалів, мають зручні ремінці та багато відділень."},"romantic_dog_bag":{"name":"Романтична Сумка з Собачкою","category":"Дітей","price":"1800 грн","description":"Елегантна сумка для щоденних прогулянок","details":"Сумка з милим принтом собачки. Виготовлена з міцних матеріалів, має зручну ручку та регульований ремінь. Ідеальна для прогулянок та шопінгу."},"lily_shaped_bag":{"name":"Сумка у Формі Лілії","category":"Жіночі","price":"2800 грн","description":"Просторний рюкзак для подорожей та походів","details":"Рюкзак у формі лілії з міцних матеріалів. Має водонепроникне покриття та зручні відділення. Ідеально підходить для подорожей та активного відпочинку."},"koala_children_backpack":{"name":"Дитячий Рюкзак з Коалою","category":"Дітей","price":"1500 грн","description":"Компактна сумка для невеликих речей","details":"Рюкзак з принтом коали. Легкий та зручний, має регульовані ремені та відділення для організації речей. Ідеальний для дітей дошкільного та молодшого шкільного віку."}},"reviews":[{"id":1,"name":"Анна Петренко","text":"Чудова якість та увага до деталей! Мій рюкзак виглядає просто чарівно і дуже зручний у використанні."},{"id":2,"name":"Максим Коваленко","text":"Замовляв індивідуальну сумку. Результат перевершив всі мої очікування. Рекомендую!"},{"id":3,"name":"Олена Сидоренко","text":"Дуже задоволена якістю та швидкістю виготовлення. Сумка вийшла просто чудова!"},{"id":4,"name":"Іван Мельник","text":"Відмінна робота! Рюкзак виготовлений з дотриманням всіх моїх побажань. Дякую!"}],"whyChooseUs":{"title":"Чому обирають нас?","subtitle":"Наші переваги, які роблять нас унікальними","contactButton":"Зв\'язатися з нами","advantages":[{"icon":"🌿","title":"Екологічні матеріали","description":"Ми використовуємо тільки якісні, екологічно чисті матеріали для наших виробів"},{"icon":"✋","title":"100% Ручна робота","description":"Кожен виріб створюється вручну з особливою увагою до деталей"},{"icon":"🛫","title":"Доставка по всьому світу","description":"Швидка та надійна доставка в будь-яку точку світу"},{"icon":"🎁","title":"Індивідуальні замовлення","description":"Створюємо унікальні вироби згідно з вашими побажаннями"}]},"orderShipping":{"title":"Замовлення та доставка","subtitle":"Простий процес замовлення та швидка доставка","orderNow":"Замовити зараз","steps":[{"number":"01","title":"Оберіть модель","description":"Перегляньте наш каталог та виберіть модель, яка вам подобається"},{"number":"02","title":"Напишіть нам","description":"Зв\'яжіться з нами через WhatsApp або форму на сайті"},{"number":"03","title":"Отримайте замовлення","description":"Ми доставимо ваше замовлення в будь-яку точку світу"}],"shipping":{"title":"Доставка","items":["Доставка по всій Україні - 2-3 дні","Міжнародна доставка - 5-10 днів","Відстеження замовлення","Безпечна упаковка"]},"production":{"title":"Період виготовлення та відправки","items":["Виготовлення виробу - 3-5 робочих днів","Відправка замовлення - протягом 1-2 днів","Можливість термінового виконання","Регулярні оновлення статусу замовлення"]}},"contact":{"title":"Зв\'яжіться з нами","subtitle":"Маєте питання? Ми завжди на зв\'язку","info":{"title":"Контактна інформація","phone":{"label":"Телефон","value":"+380991234567","display":"+38 (099) 123-45-67"},"email":{"label":"Email","value":"info@rovenets.com","display":"info@rovenets.com"},"address":{"label":"Адреса","value":"м. Київ, вул. Прикладна, 1"}},"form":{"title":"Напишіть нам","name":{"label":"Ваше ім\'я","placeholder":"Введіть ваше ім\'я"},"email":{"label":"Email","placeholder":"Введіть вашу електронну пошту"},"message":{"label":"Повідомлення","placeholder":"Введіть ваше повідомлення"},"submit":"Надіслати"}},"footer":{"contacts":"Контакти","socialTitle":"Соціальні мережі","social":{"instagram":"Instagram","facebook":"Facebook","telegram":"Telegram"},"workingHours":{"title":"Робочий час","weekdays":"Пн-Пт: 10:00 - 19:00","saturday":"Сб: 11:00 - 17:00","sunday":"Нд: Вихідний"},"copyright":"Всі права захищено."}}');
 
 /***/ }),
 

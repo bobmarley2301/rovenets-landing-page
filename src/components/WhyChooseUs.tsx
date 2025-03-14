@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
   }>;
 
   return (
-    <section id="why-choose-us" className="py-24 bg-amber-50">
+    <section id="why-us" className="py-24 bg-amber-50">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

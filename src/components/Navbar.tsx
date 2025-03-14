@@ -79,7 +79,7 @@ const Navbar = () => {
         return "Про нас";
       case "products":
         return "Продукція";
-      case "whyChooseUs":
+      case "why-us": // Змінено з "why-us" на "whyChooseUs"
         return "Чому ми";
       case "orderShipping":
         return "Замовлення";
@@ -127,8 +127,8 @@ const Navbar = () => {
             className="md:hidden text-amber-900"
             aria-label={
               isOpen
-                ? (t("navigation.close", "Закрити меню") as string)
-                : (t("navigation.open", "Відкрити меню") as string)
+                ? t("navigation.close", "Закрити меню").toString()
+                : t("navigation.open", "Відкрити меню").toString()
             }
           >
             {isOpen ? (

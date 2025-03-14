@@ -1,11 +1,11 @@
 export type SectionId =
   | "home"
-  | "products"
   | "about"
-  | "contact"
+  | "products"
   | "reviews"
-  | "orderShipping"
-  | "why-us";
+  | "why-us"
+  | "order-shipping"
+  | "contact";
 
 export interface NavItem {
   name: string;
