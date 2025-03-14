@@ -12,6 +12,7 @@ import card2 from "../images/card2.webp";
 import card3 from "../images/card3.webp";
 import card4 from "../images/card4.webp";
 import card5 from "../images/card5.jpg";
+import cardAditiolan from "../images/cardAditiolan.webp";
 import { t } from "i18next";
 
 interface Product {
@@ -32,6 +33,7 @@ const categories = [
   { id: "women", name: t("categories.womens") },
   { id: "children", name: t("categories.children") },
   { id: "mom&child", name: t("categories.mom&child") },
+  { id: "additionally", name: t("categories.additionally") },
 ];
 
 const Products = () => {
@@ -87,6 +89,16 @@ const Products = () => {
       description: t("product.mom_child_bear_set.description"),
       details: t("product.mom_child_bear_set.details"),
       images: [card5, card2, card3, card4],
+    },
+    {
+      id: 6,
+      name: t("product.aditional.name"),
+      category: "additionally",
+      price: t("product.aditional.price"),
+      image: cardAditiolan,
+      description: t("product.aditional.description"),
+      details: t("product.aditional.details"),
+      images: [cardAditiolan, card1, card2, card3, card4],
     },
   ];
   
@@ -213,7 +225,7 @@ const Products = () => {
               >
                 <button
                   onClick={() => setSelectedProduct(null)}
-                  className="absolute -top-3 -right-3 sm:top-4 sm:right-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20"
+                  className="absolute -top-3 -left-2 sm:top-1 sm:left-4 bg-white rounded-full p-2 shadow-lg hover:shadow-xl transition-shadow z-20"
                   aria-label="Закрити"
                 >
                   <XMarkIcon className="h-8 w-8 text-amber-900 hover:text-amber-700 m-2" />

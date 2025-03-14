@@ -53,7 +53,8 @@
     "children": "Children",
     "women": "Women's",
     "all": "All",
-    "mom&child": "Mom & Child"
+    "mom&child": "Mom & Child",
+    "additionally": "Care Products"
   },
   "product": {
     "name": "Name",
@@ -94,6 +95,13 @@
       "price": "1500 UAH",
       "description": "A compact bag for small items",
       "details": "A backpack with a koala print. Lightweight and comfortable, it has adjustable straps and compartments for organizing your things. Ideal for preschool and early school-age children."
+    },
+    "aditional": {
+      "name": "Leather Care Shampoo",
+      "category": "Accessories",
+      "price": "350 UAH",
+      "description": "Special cleansing formula for leather products care",
+      "details": "Our premium leather care shampoo is specially formulated to clean and nourish all types of leather products. The gentle formula removes dirt and stains while preserving the natural oils in the leather. Regular use helps extend the life of your bags, backpacks, and other leather items, keeping them soft, supple, and beautiful for years to come. Contains no harsh chemicals and is environmentally friendly."
     }
   },
   "reviews": {
